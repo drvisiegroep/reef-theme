@@ -9,6 +9,9 @@
 // Standaard includes
 include( get_template_directory() . '/inc/loop.php' );
 include( get_template_directory() . '/inc/tha-theme-hooks.php' );
+include( get_template_directory() . '/inc/cleanup.php' );
+include( get_template_directory() . '/inc/cleanup-classes.php' );
+
 
 // Utilities
 include( get_template_directory() . '/inc/utils/svg-link-shortcode.php' );
@@ -107,23 +110,10 @@ if ( ! function_exists( 'reef_setup' ) ) :
     add_action( 'after_setup_theme', 'reef_setup' );
 
 
-
-//
-// Pagina iets naar benden drukken i.v.m. Admin balk.
-//
-function remove_adminbar_margin() {
-    $remove_adminbar_margin = '
-    <style type="text/css">  
-    html { margin-top: -28px !important; }  
-    * html body { margin-top: -28px !important; }  
-    </style>';  
-
-    echo $remove_adminbar_margin;  
+if(current_user_can('manage_options') == 1) {
+    show_admin_bar(true);
+} else {
+    show_admin_bar(false);
 }
-
- if ( is_admin() ) {  
-    // remove_action( 'init', '_wp_admin_bar_init' );  
-    add_action( 'admin_head', 'remove_adminbar_margin' );  
-}  
 
 ?>
