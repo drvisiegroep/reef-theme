@@ -25,30 +25,23 @@ if ( function_exists( 'wp_body_open' ) ) {
 
 tha_body_top();
 
-	tha_header_before();
-	?>
+	tha_header_before(); ?>
 
     <header class="site-header" role="banner">
     	<div class="wrap">
 
-	<?php
-	tha_header_top();
-	?>
+	<?php tha_header_top();	?>
 
     		<div class="title-area">
-    			<?php echo '<p class="site-title"><a href="' . esc_url( home_url() ) . '" rel="home">' . get_bloginfo( 'name' )  . do_shortcode('[wa_svg_icon icon=capybara]') . '</a></p >'; ?>
+    			<?php echo '<p class="site-title"><a href="' . esc_url( home_url() ) . '" rel="home">' . get_bloginfo( 'name' )  . wa_svg_icon(['icon' => 'capybara']) . '</a></p >'; ?>
     		</div> <!-- /.title-area -->
 
-	<?php
-	tha_header_bottom();
-	?>
+	<?php tha_header_bottom(); ?>
 
     	</div> <!-- /.wrap -->
     </header>
 
-	<?php
-	tha_header_after();
-	?>
+	<?php tha_header_after(); ?>
 
 
 	<?php 
