@@ -7,9 +7,12 @@
 // @since        1.0.0
 //
 // TODO: fix functies
+//
+
+
 echo '<article class="post-summary">';
 
-	ea_post_summary_image();
+	// ea_post_summary_image();
 
 	echo '<div class="post-summary__content">';
 		// ea_entry_category();
