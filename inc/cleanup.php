@@ -9,6 +9,8 @@
 // TODO: Uitleg + links remove_actions en json api
 // https://gist.github.com/Auke1810/f2a4cf04f2c07c74a393a4b442f22267
 
+
+
 //
 // Shrink admin bar / expand on hover
 // https://css-tricks.com/snippets/wordpress/shrink-the-admin-bar-expand-on-hover/
@@ -17,8 +19,13 @@ add_action('get_header', 'my_filter_head');
 function my_filter_head() { 
     remove_action('wp_head', '_admin_bar_bump_cb'); 
 }
- 
-function my_admin_css() {
+
+
+
+//
+// Minimize admin bar and show on hover
+//
+function reef_admin_css() {
         if ( is_user_logged_in() ) {
         ?>
         <style type="text/css">
@@ -50,10 +57,13 @@ function my_admin_css() {
         </style>
         <?php }
 }
-add_action('wp_head', 'my_admin_css');
+add_action('wp_head', 'reef_admin_css');
 
 
 
+//
+// Clean up the head tags
+//
 remove_action('wp_head', 'wp_generator');
 remove_action('wp_head', 'feed_links', 2);
 remove_action('wp_head', 'feed_links_extra', 3);
@@ -67,6 +77,8 @@ remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
 remove_action('wp_head', 'print_emoji_detection_script', 7 );
 remove_action('wp_print_styles', 'print_emoji_styles' );
 remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
+
+
 
 //
 // Remove JSON API links in header html
@@ -97,6 +109,8 @@ function remove_json_api () {
 
 }
 add_action( 'after_setup_theme', 'remove_json_api' );
+
+
 
 //
 //	Snippet completely disable the REST API and shows {"code":"rest_disabled","message":"The REST API is disabled on this site."} 
