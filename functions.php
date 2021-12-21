@@ -8,10 +8,10 @@
 
 // Standaard includes
 include( get_template_directory() . '/inc/loop.php' );
+include( get_template_directory() . '/inc/navigation.php' );
 include( get_template_directory() . '/inc/tha-theme-hooks.php' );
 include( get_template_directory() . '/inc/cleanup.php' );
 include( get_template_directory() . '/inc/cleanup-classes.php' );
-
 
 // Utilities
 include( get_template_directory() . '/inc/utils/svg-link-shortcode.php' );
