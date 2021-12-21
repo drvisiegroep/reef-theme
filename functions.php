@@ -1,4 +1,8 @@
 <?php
+// Checklist WIP
+// Zoekveld vertaling
+
+
 // TODO: Content width? Hebben we dat nodig?
 
 
