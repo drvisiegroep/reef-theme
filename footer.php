@@ -20,7 +20,7 @@
 			<div class="menu-1">
 				<?php dynamic_sidebar('footer-1'); ?>
 			</div>
-			<a class="backtotop" href="#main-content"><?php wa_svg_icon('arrow_up'); ?></a>
+			<a class="backtotop" href="#main-content"><?php wa_svg_icon(['icon' => 'arrow-up', 'size' => 24]); ?></a>
 		</div>
 
 	<?php tha_footer_bottom(); ?>
