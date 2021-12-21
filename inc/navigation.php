@@ -17,9 +17,9 @@
 function reef_site_header() {
 	echo reef_mobile_menu_toggle();
 	echo reef_search_toggle();
-	echo '<div>' . get_search_form( array( 'echo' => false ) ) . '<div class="overlay"></div></div>';
+	echo '<div class="header-search">' . get_search_form( array( 'echo' => false ) ) . '<div class="overlay"></div></div>';
 
-	echo '<nav role="navigation">';
+	echo '<nav class="nav-menu" role="navigation">';
 	if( has_nav_menu( 'primary' ) ) {
 		wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'container_class' => 'nav-primary' ) );
 	}
@@ -58,7 +58,7 @@ add_filter( 'wp_nav_menu_items', 'reef_nav_extras', 10, 2 );
 // Zoekfunctie
 //
 function reef_search_toggle() {
-	$output = '<button>';
+	$output = '<button class="search-toggle">';
 		$output .= wa_svg_icon( array( 'icon' => 'search', 'size' => 24, 'class' => 'open' ) );
 		$output .= wa_svg_icon( array( 'icon' => 'close', 'size' => 24, 'class' => 'close' ) );
 		$output .= '<span class="screen-reader-text">Search</span>';
@@ -72,7 +72,7 @@ function reef_search_toggle() {
 // Hamburger menu
 //
 function reef_mobile_menu_toggle() {
-	$output = '<button>';
+	$output = '<button class="menu-toggle">';
 		$output .= wa_svg_icon( array( 'icon' => 'menu', 'size' => 24, 'class' => 'open' ) );
 		$output .= wa_svg_icon( array( 'icon' => 'close', 'size' => 24, 'class' => 'close' ) );
 		$output .= '<span class="screen-reader-text">Menu</span>';
@@ -97,7 +97,7 @@ function reef_nav_add_dropdown_icons( $output, $item, $depth, $args ) {
 		// Add SVG icon to parent items.
 		$icon = wa_svg_icon( array( 'icon' => 'navigate-down', 'size' => 10, 'title' => 'Submenu Dropdown' ) );
 
-		$output .= '<button tabindex="-1">'.$icon.'</button>';
+		$output .= '<button class="submenu-expand" tabindex="-1">'.$icon.'</button>';
 			
 		
 	}
