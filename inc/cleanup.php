@@ -12,18 +12,8 @@
 
 
 //
-// Shrink admin bar / expand on hover
-// https://css-tricks.com/snippets/wordpress/shrink-the-admin-bar-expand-on-hover/
-//
-add_action('get_header', 'my_filter_head');
-function my_filter_head() { 
-    remove_action('wp_head', '_admin_bar_bump_cb'); 
-}
-
-
-
-//
 // Minimize admin bar and show on hover
+// https://css-tricks.com/snippets/wordpress/shrink-the-admin-bar-expand-on-hover/
 //
 function reef_admin_css() {
         if ( is_user_logged_in() ) {
@@ -52,7 +42,7 @@ function reef_admin_css() {
                 -moz-transition-delay: 0;
                 -o-transition-delay: 0;
                 -ms-transition-delay: 0;
-                transition-delay: 0;
+                transition-delay: 0s;
             }
         </style>
         <?php }
