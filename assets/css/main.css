@@ -3,6 +3,7 @@ TODO: kleuren, borderradius etc in variablen
 TODO: hardcoded kleuren nakijken
 TODO: ongebruikte zooi eruit, alles wat er in gaat checken op duplicaties
 TODO: Default styling aanpassen waar nodig
+TODO: mobiel menu\menu on scroll fatsoenlijk fixen. Toch aan de linkerkant maken?
 */
 
 a,
@@ -213,6 +214,7 @@ input[type="search"] {
   text-decoration: none;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 }
+/* TODO: Willen we sidebar houden? */
 @media (max-width: 991px) {
   .sidebar-primary {
     display: none;
@@ -927,14 +929,14 @@ img.aligncenter {
     display: none;
   }
 }
-.site-header .wrap > .menu-toggle {
+/* .site-header .wrap > .menu-toggle {
   left: 0;
-}
+} */
 .site-header .wrap > .search-toggle {
   right: 0;
 }
 /* custom start 
-TODO: fixeen wat we overschrijven
+TODO: fixen wat we overschrijven
 */
 .site-header .wrap .header-search {
 	top: 120px;
@@ -964,6 +966,46 @@ TODO: fixeen wat we overschrijven
 	height: 100%;
 	background: #00000038;
 	z-index: 23;
+}
+
+/* menu on scroll  */
+.site-header.active::before {
+	content: '';
+	width: 111px;
+	height: 48px;
+	background: #FFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	border-radius: 0 0 15px 0;
+	box-shadow: 2px 0px 10px rgba(0,0,0,0.3);
+}
+.site-header.active .wrap > .menu-toggle,
+.site-header.active .wrap > .search-toggle {
+	display: block;
+	position: fixed;
+	top: 0;
+  left: 0;
+	z-index: 1000;
+}
+.site-header.active .wrap > .menu-toggle {
+  left: 48px;
+}
+.site-header.active .wrap .nav-menu.active {
+	display: block;
+	margin: 0;
+	position: fixed;
+	top: 80px;
+	left: 0;
+	z-index: 100;
+  width: auto;
+}
+.site-header.active .wrap .nav-menu.active li {
+  float: unset;
+}
+.site-header.active .wrap .nav-menu.active .menu-item.search {
+  display: none;
 }
 
 /* custom end */

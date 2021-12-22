@@ -1,6 +1,8 @@
-jQuery(function($){
+//TODO: Willen we document ready?
 
-	// Mobile Menu
+jQuery(document).ready(function($){
+
+	// Mobiel menu
 	$('.menu-toggle').click(function(){
 		$('.search-toggle, .header-search').removeClass('active');
 		$('.menu-toggle, .nav-menu').toggleClass('active');
@@ -21,6 +23,12 @@ jQuery(function($){
     $('.header-search .overlay').click(function(){
 		$('.menu-toggle, .nav-menu').removeClass('active');
 		$('.search-toggle, .header-search').toggleClass('active');
+	});
+
+	// Hamburger on scroll
+	$(window).scroll( function() {
+		if($(window).scrollTop() > 50) { $('.site-header').addClass('active'); }
+		else { $('.site-header').removeClass('active'); }
 	});
 
 });
