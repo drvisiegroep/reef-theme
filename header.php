@@ -7,6 +7,9 @@
 // @author       Daniël R.
 // @since        1.0.0
 //
+// TODO: Verschillende includes voor banner. Hoe gaan we dat doen? handmatig met includes? if/else/case gebasseerd op admin options via acf?
+// TODO: Default banner
+// TODO: Paginas met content (header/footer/arcive/page etc.) meer consistent maken echos of html? 
 
 echo '<!DOCTYPE html>';
 tha_html_before();

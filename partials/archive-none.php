@@ -6,6 +6,7 @@
 // @author       Daniël R.
 // @since        1.0.0
 //
+// TODO: Vertalingen
 
 
 echo '<section class="no-results not-found">';

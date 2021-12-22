@@ -6,7 +6,7 @@
 // @author       Daniël R.
 // @since        1.0.0
 //
-// TODO: fix functies
+// TODO: fix functies (naar native wordpress?)
 //
 
 

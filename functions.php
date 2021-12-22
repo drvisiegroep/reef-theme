@@ -4,6 +4,7 @@
 
 
 // TODO: Content width? Hebben we dat nodig?
+// TODO: Willen we verschillende layouts?
 
 
 //

@@ -4,15 +4,15 @@
 // Geupdate als shortcode met opties voor link en plaatje
 // Voorbeeld (alleen svg):  [wa_svg_icon icon=logo] 
 // Voorbeeld (svg en link): [wa_svg_icon icon=logo link=https://www.websiteaanbieder.nl]
-// Voorbeeld inline:  wa_svg_icon(['icon' => 'logo' 'link' => 'https://www.websiteaanbieder.nl']); 
+// Voorbeeld inline:  wa_svg_icon(['icon' => 'logo', 'link' => 'https://www.websiteaanbieder.nl']); 
 //
 // !!! Vergeet niet het pad te controleren als de shortcode niet lijkt te werken !!!
 //
 // TODO: url check regex  
 // TODO: pad als argument
-// TODO: refactor 2 functies naar 1
+// TODO: refactor de 2 functies naar 1
 
-// Throw this in your theme and include it in your functions.php file 
+
 
 /* Helper function for fetching SVG icons
  *

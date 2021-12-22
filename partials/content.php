@@ -6,6 +6,7 @@
 // @author       Daniël R.
 // @since        1.0.0
 //
+// TODO: vertaling
 
 echo '<article class="' . join( ' ', get_post_class() ) . '">';
 
