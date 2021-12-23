@@ -7,10 +7,14 @@ jQuery(document).ready(function($){
 		$('.search-toggle, .header-search').removeClass('active');
 		$('.menu-toggle, .nav-menu').toggleClass('active');
 	});
+
+
+	// Submenus
 	$('.menu-item-has-children > .submenu-expand').click(function(e){
 		$(this).toggleClass('expanded');
 		e.preventDefault();
 	});
+
 
 	// Search toggle
 	$('.search-toggle').click(function(){
@@ -19,11 +23,13 @@ jQuery(document).ready(function($){
 		$('.site-header .search-field').focus();
 	});
 
+
     // Search toggle op overlay
     $('.header-search .overlay').click(function(){
 		$('.menu-toggle, .nav-menu').removeClass('active');
 		$('.search-toggle, .header-search').toggleClass('active');
 	});
+
 
 	// Hamburger on scroll
 	$(window).scroll( function() {
