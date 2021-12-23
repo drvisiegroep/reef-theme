@@ -937,18 +937,20 @@ img.aligncenter {
 }
 /* custom start 
 TODO: fixen wat we overschrijven
+TODO: scroll menu veranderen naar uitschuif menu?
 */
+/* adminbar*/
+body.admin-bar {
+	margin-top: 32px;
+}
 .site-header .wrap .header-search {
-	top: 120px;
+	top: 32px;
 	padding: 0 15px;
 	position: fixed;
 	z-index: 999;
 	background: transparent;
-}
-.site-header .wrap .header-search {
-    overflow: hidden;
+  overflow: hidden;
 	bottom: unset;
-	position: absolute;
 	width: 100%;
 	left: 0;
 	margin: 0 auto;
@@ -956,7 +958,7 @@ TODO: fixen wat we overschrijven
 }
 .site-header .wrap .header-search.active .search-form {
     z-index: 24;
-    margin: 0px 0px 0px auto;
+    margin: 0px auto 0px 0px;
 }
 .site-header .wrap .header-search.active .overlay {
 	position: fixed;
@@ -989,10 +991,16 @@ TODO: fixen wat we overschrijven
   left: 0;
 	z-index: 1000;
 }
+body.admin-bar .site-header.active .wrap > .menu-toggle,
+body.admin-bar .site-header.active .wrap > .search-toggle,
+body.admin-bar .site-header.active::before {
+  top: 32px;
+}
+
 .site-header.active .wrap > .menu-toggle {
   left: 48px;
 }
-.site-header.active .wrap .nav-menu.active {
+/* .site-header.active .wrap .nav-menu.active {
 	display: block;
 	margin: 0;
 	position: fixed;
@@ -1000,7 +1008,33 @@ TODO: fixen wat we overschrijven
 	left: 0;
 	z-index: 100;
   width: auto;
+} */
+/* uitschuifmenu test */
+.site-header.active .wrap .nav-menu {
+  transform: translateX(-215px);
+  transition: transform 0.2s ease;
 }
+.site-header.active .wrap .nav-menu.active {
+	position: fixed;
+	top: 48px;
+	left: 0;
+	z-index: 100;
+	width: auto;
+	background-color: #fff;
+	height: 100vh;
+	width: 215px;
+	transform: translateX(0);
+	transition: transform 0.2s ease;
+  flex-flow: column;
+}
+.site-header.active .wrap .nav-menu.active .nav-primary {
+  -webkit-box-pack: start;
+  justify-content: start;
+}
+.site-header.active .wrap .nav-menu.active .nav-primary ul {
+  width: 215px;
+}
+
 .site-header.active .wrap .nav-menu.active li {
   float: unset;
 }
