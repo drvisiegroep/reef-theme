@@ -17,6 +17,7 @@ include( get_template_directory() . '/inc/navigation.php' );
 include( get_template_directory() . '/inc/tha-theme-hooks.php' );
 include( get_template_directory() . '/inc/cleanup.php' );
 include( get_template_directory() . '/inc/cleanup-classes.php' );
+include( get_template_directory() . '/inc/acf.php' );
 
 // Utilities
 include( get_template_directory() . '/inc/utils/svg-link-shortcode.php' );
