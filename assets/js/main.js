@@ -24,8 +24,8 @@ jQuery(document).ready(function($){
 	});
 
 
-    // Search toggle op overlay
-    $('.header-search .overlay').click(function(){
+	// Search toggle op overlay
+	$('.header-search .overlay').click(function(){
 		$('.menu-toggle, .nav-menu').removeClass('active');
 		$('.search-toggle, .header-search').toggleClass('active');
 	});
