@@ -1,5 +1,5 @@
 /*
-TODO: kleuren, borderradius etc in variablen
+TODO: kleuren, borderradius etc in variablen / goed onderscheid maken tussen de 2 hoofdkleuren en de rest.
 TODO: hardcoded kleuren nakijken
 TODO: ongebruikte zooi eruit, alles wat er in gaat checken op duplicaties
 TODO: Default styling aanpassen waar nodig
@@ -183,12 +183,11 @@ input[type="search"] {
     padding: 48px 0;
   }
 }
+/* TODO: check singular + css waarom 800px? */
 .singular.content .site-inner > .wrap {
   max-width: 800px;
 }
-.genesis-skip-link {
-  display: none;
-}
+/* TODO: Screenreader nodig? */
 .screen-reader-text,
 .screen-reader-text span,
 .screen-reader-shortcut {
@@ -220,6 +219,7 @@ input[type="search"] {
     display: none;
   }
 }
+/* TODO: Gaan we @supportrs gebruiken?*/
 @media (min-width: 992px) {
   .content-sidebar .site-main {
     float: left;
@@ -500,6 +500,8 @@ h6 {
     font-size: 22px;
   }
 }
+/* Wordpress blocks */
+/* TODO: kleuren (has-blue, has-grey) classes aanpassen naar whatever we kiezen voor de 2 kleuren in de functions.php / kleuren variabel.*/
 .wp-block-button__link {
   border: 2px solid #031b3e;
   border-radius: 3px;
@@ -831,7 +833,7 @@ img.aligncenter {
     opacity: 0;
     position: absolute;
     width: 215px;
-    z-index: 99;
+    z-index: 10;
   }
   .nav-menu .sub-menu .menu-item {
     float: none;
@@ -947,7 +949,7 @@ body.admin-bar {
 	top: 32px;
 	padding: 0 15px;
 	position: fixed;
-	z-index: 999;
+	z-index: 10;
 	background: transparent;
   overflow: hidden;
 	bottom: unset;
@@ -957,7 +959,7 @@ body.admin-bar {
 	max-width: 1200px;
 }
 .site-header .wrap .header-search.active .search-form {
-    z-index: 24;
+    z-index: 10;
     margin: 0px auto 0px 0px;
 }
 .site-header .wrap .header-search.active .overlay {
@@ -967,7 +969,7 @@ body.admin-bar {
 	width: 100%;
 	height: 100%;
 	background: #00000038;
-	z-index: 23;
+	z-index: 9;
 }
 
 /* menu on scroll  */
@@ -979,7 +981,7 @@ body.admin-bar {
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 999;
+	z-index: 10;
 	border-radius: 0 0 15px 0;
 	box-shadow: 2px 0px 10px rgba(0,0,0,0.3);
 }
@@ -989,7 +991,7 @@ body.admin-bar {
 	position: fixed;
 	top: 0;
   left: 0;
-	z-index: 1000;
+	z-index: 10;
 }
 body.admin-bar .site-header.active .wrap > .menu-toggle,
 body.admin-bar .site-header.active .wrap > .search-toggle,
@@ -1006,7 +1008,7 @@ body.admin-bar .site-header.active::before {
 	position: fixed;
 	top: 80px;
 	left: 0;
-	z-index: 100;
+	z-index: 10;
   width: auto;
 } */
 /* uitschuifmenu test */
@@ -1018,7 +1020,7 @@ body.admin-bar .site-header.active::before {
 	position: fixed;
 	top: 48px;
 	left: 0;
-	z-index: 100;
+	z-index: 10;
 	width: auto;
 	background-color: #fff;
 	height: 100vh;
@@ -1069,6 +1071,7 @@ body.admin-bar .site-header.active::before {
 .header-search:not(.active) {
   display: none;
 }
+/* TODO: blijven deze classes voor posts/category zo?*/
 .post-summary {
   margin-bottom: 32px;
 }
