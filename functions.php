@@ -23,6 +23,7 @@ include( get_template_directory() . '/inc/acf.php' );
 include( get_template_directory() . '/inc/utils/svg-link-shortcode.php' );
 include( get_template_directory() . '/inc/utils/custom-post-types.php');
 include( get_template_directory() . '/inc/utils/block-whitelist.php');
+include( get_template_directory() . '/inc/utils/custom-patterns.php');
 
 
 
@@ -110,6 +111,9 @@ if ( ! function_exists( 'reef_setup' ) ) :
     
         // Wide Images
         add_theme_support( 'align-wide' );
+		
+		//Block styles
+		add_theme_support('wp-block-styles');
     
     }
     endif;
@@ -121,5 +125,3 @@ if(current_user_can('manage_options') == 1) {
 } else {
     show_admin_bar(false);
 }
-
-?>
