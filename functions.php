@@ -24,6 +24,7 @@ include( get_template_directory() . '/inc/utils/svg-link-shortcode.php' );
 include( get_template_directory() . '/inc/utils/custom-post-types.php');
 include( get_template_directory() . '/inc/utils/block-whitelist.php');
 include( get_template_directory() . '/inc/utils/custom-patterns.php');
+include( get_template_directory() . '/inc/utils/custom-blocks.php');
 
 
 
