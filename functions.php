@@ -1,8 +1,6 @@
 <?php
-// Checklist WIP
-// Zoekveld vertaling
-
-
+// TODO: Checklist WIP
+// TODO: Zoekveld vertaling
 // TODO: Content width? Hebben we dat nodig?
 // TODO: Willen we verschillende layouts?
 
@@ -18,13 +16,15 @@ include( get_template_directory() . '/inc/tha-theme-hooks.php' );
 include( get_template_directory() . '/inc/cleanup.php' );
 include( get_template_directory() . '/inc/cleanup-classes.php' );
 include( get_template_directory() . '/inc/acf.php' );
+include( get_template_directory() . '/inc/helper-functions.php' );
 
 // Utilities
 include( get_template_directory() . '/inc/utils/svg-link-shortcode.php' );
 include( get_template_directory() . '/inc/utils/custom-post-types.php');
 include( get_template_directory() . '/inc/utils/block-whitelist.php');
 include( get_template_directory() . '/inc/utils/custom-patterns.php');
-include( get_template_directory() . '/inc/utils/custom-blocks.php');
+include( get_template_directory() . '/inc/utils/editor-options.php');
+// include( get_template_directory() . '/inc/utils/custom-blocks.php');
 
 
 
@@ -74,7 +74,7 @@ if ( ! function_exists( 'reef_setup' ) ) :
         add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
     
         // Add default posts and comments RSS feed links to head.
-        add_theme_support( 'automatic-feed-links' );
+        // add_theme_support( 'automatic-feed-links' );
     
         // Body open hook
         add_theme_support( 'body-open' );
