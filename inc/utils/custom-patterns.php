@@ -81,16 +81,15 @@ add_action( 'init', 'register_custom_block_patterns' );
 
 
 add_action('init', function() {
-	register_post_type('book', [
-		'label' => __('Books', 'txtdomain'),
+	register_post_type('boeken', [
+		'label' => __('Boeken', 'reef-theme'),
 		'public' => true,
 		'show_in_rest' => true,
        	'supports' => array('editor'),
-		'template' => [
-			['custom/my_pattern'],
-			['core/cover', ['align' => 'full', 'overlayColor' => 'blue-profile'], [
-				['core/heading', ['align' => 'center', 'placeholder' => __('Call to action title', 'txtdomain')]],
-				['core/paragraph', ['align' => 'center', 'placeholder' => __('Your text here', 'txtdomain')]],
+		'template' => [			
+			['core/cover', ['align' => 'full', 'overlayColor' => 'blauw'], [
+				['core/heading', ['align' => 'center', 'placeholder' => __('Uw titel', 'reef-theme')]],
+				['core/paragraph', ['align' => 'center', 'placeholder' => __('Uw tekst hier', 'reef-theme')]],
 				['core/button', ['align' => 'center']]
 			]],
 		],
