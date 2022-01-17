@@ -98,7 +98,7 @@ function remove_json_api () {
    add_filter( 'rewrite_rules_array', 'disable_embeds_rewrites' );
 
 }
-add_action( 'after_setup_theme', 'remove_json_api' );
+// add_action( 'after_setup_theme', 'remove_json_api' );
 
 
 

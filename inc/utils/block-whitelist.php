@@ -24,7 +24,7 @@
 // Voeg hier de blokken toe die je wil gaan gebruiken
 //
 
-// add_filter( 'allowed_block_types_all', 'our_allowed_block_types' );
+add_filter( 'allowed_block_types_all', 'our_allowed_block_types' );
  
 function our_allowed_block_types( $allowed_blocks ) {
  
@@ -45,7 +45,7 @@ function our_allowed_block_types( $allowed_blocks ) {
         // Widgets
         'core/shortcode',
 		//Patterns
-		''
+		
 
 	);
  
