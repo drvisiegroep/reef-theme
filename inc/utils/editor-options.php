@@ -4,7 +4,7 @@
 // https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/
 //
 
-function reef_editor_options() {
+
     
     // Font size uitzetten
     add_theme_support( 'disable-custom-font-sizes' );
@@ -47,5 +47,5 @@ function reef_editor_options() {
                 'color' => '#23282d',
             ),
         ) );
-}
+
 ?>
