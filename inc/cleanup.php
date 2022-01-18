@@ -117,7 +117,7 @@ function disable_json_api () {
   add_filter('rest_jsonp_enabled', '__return_false');
 
 }
-add_action( 'after_setup_theme', 'disable_json_api' );
+// add_action( 'after_setup_theme', 'disable_json_api' );
 
 
 
