@@ -1,4 +1,10 @@
 <?php
+//
+// Custom | Patterns
+//
+// @package      reef-theme
+// @author       Daniël R.
+// @since        1.0.0
 
 register_block_pattern_category(
     'custom',
