@@ -1,10 +1,12 @@
 <?php
 //
-// Basis template
+// Basis template | Index
 //
 // @package      reef-theme
 // @author       Daniël R.
 // @since        1.0.0
+//
+// TODO: Sidebar?
 //
 
 get_header();
