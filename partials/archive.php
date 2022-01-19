@@ -16,8 +16,9 @@
 echo '<article class="post-summary">';
 
 	// ea_post_summary_image();
-	echo '<a class="post-summary__image" href="' . get_permalink() . '" tabindex="-1" aria-hidden="true">' . wp_get_attachment_image( get_post_thumbnail_id() , 'thumbnail_medium' );
-	
+	if(has_post_thumbnail()) {
+		echo '<a class="post-summary__image" href="' . get_permalink() . '" tabindex="-1" aria-hidden="true">' . wp_get_attachment_image( get_post_thumbnail_id() , 'thumbnail_medium' ).'</a>';
+	}
 
 	echo '<div class="post-summary__content">';
 
@@ -34,6 +35,6 @@ echo '<article class="post-summary">';
 	echo '<' . $tag . ' class="post-summary__title"><a href="' . get_permalink() . '">' . get_the_title() . '</a></' . $tag . '>';
 
 
-	echo '</div>';
+	echo '</div> <!-- .post-summary__content-->';
 
 echo '</article>';
