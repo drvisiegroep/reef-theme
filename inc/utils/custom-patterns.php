@@ -85,7 +85,7 @@ add_action('init', function() {
 		'label' => __('Boeken', 'reef-theme'),
 		'public' => true,
 		'show_in_rest' => true,
-       	'supports' => array('editor'),
+       	'supports' => array('editor','title'),
 		'template' => [			
 			['core/cover', ['align' => 'full', 'overlayColor' => 'blauw'], [
 				['core/heading', ['align' => 'center', 'placeholder' => __('Uw titel', 'reef-theme')]],
