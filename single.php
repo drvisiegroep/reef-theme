@@ -6,6 +6,8 @@
 // @author       Daniël R.
 // @since        1.0.0
 //
+// TODO: Datumnotatie
+//
 
 //
 // Before entry
@@ -37,8 +39,15 @@ function reef_single_after_entry() {
 
 	echo '</div>';
 
+	// If comments are open or we have at least one comment, load up the comment template.
+	if ( comments_open() || get_comments_number() ) :
+		comments_template();
+	endif;
+
 }
 add_action( 'tha_content_while_after', 'reef_single_after_entry', 8 );
+
+
 
 // Build the page
 require get_template_directory() . '/index.php';
