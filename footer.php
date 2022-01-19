@@ -6,8 +6,9 @@
 // @author       Daniël R.
 // @since        1.0.0
 //
-//
 // TODO: wp_svg_icon vast pad en dir met benodigde icoontjes
+// TODO: hebben we de menu-1 class nodig?
+//
 ?>
 
 
@@ -17,9 +18,9 @@
 	<?php tha_footer_top(); ?>
 
 		<div class="footer-menu">
-			<div class="menu-1">
+			
 				<?php dynamic_sidebar('footer-1'); ?>
-			</div>
+		
 			<a class="backtotop" href="#main-content"><?php wa_svg_icon(['icon' => 'arrow-up', 'size' => 24]); ?></a>
 		</div>
 
@@ -30,7 +31,9 @@
 
 	<div class="sub-footer">
 		<div class="wrap">
+
 			<?php dynamic_sidebar('footer-2'); ?>
+
 		</div>
 	</div>
 </footer>
