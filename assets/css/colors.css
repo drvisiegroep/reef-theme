@@ -1,0 +1,361 @@
+/* TODO: has-grey and has-blue nakijken*/
+
+:root {
+  --primaryColor: #94c35a;
+  --secondaryColor: #5c911b;
+  --primaryVariationColor: #0073aa;
+  --secondaryVariationColor: #0d3452;
+  --blackCustomColor: #000000;
+  --whiteCustomColor: #ffffff;
+  --greyCustomColor: #d5d2cd;
+}
+
+.search-form .search-submit svg {
+  fill: #757575;
+}
+.search-form .search-submit svg:hover {
+  fill: #05306f;
+}
+body {
+  color: #424242;
+}
+a {
+  color: #05306f;
+}
+a:hover {
+}
+
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #212121;
+
+} */
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: #212121;
+}
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
+  color: #05306f;
+}
+
+.wp-block-button__link {
+  border: 2px solid #031b3e;
+}
+
+.wp-block-button__link:not(.has-text-color) {
+  color: white;
+}
+.wp-block-button__link:not(.has-text-color):hover {
+  color: white;
+}
+.wp-block-button__link:not(.has-background) {
+  background-color: #05306f;
+}
+.wp-block-button__link:not(.has-background):hover,
+.wp-block-button__link:not(.has-background):focus {
+  background-color: #031b3e;
+}
+
+/* Blockquotes ook met primary secondary etc doen? */
+blockquote p,
+blockquote.wp-block-quote p {
+  color: #424242;
+}
+blockquote cite,
+blockquote .wp-block-quote__citation,
+blockquote.wp-block-quote cite,
+blockquote.wp-block-quote .wp-block-quote__citation {
+  color: #424242;
+  opacity: 0.5;
+}
+.wp-block-separator::before,
+hr::before {
+  background: #e0e0e0;
+}
+.wp-block-image figcaption {
+  color: #757575;
+}
+
+.wp-block-group.has-background:not(.has-grey-background-color) {
+  color: #fff;
+}
+.wp-block-group.has-background:not(.has-grey-background-color) h1,
+.wp-block-group.has-background:not(.has-grey-background-color) h2,
+.wp-block-group.has-background:not(.has-grey-background-color) h3,
+.wp-block-group.has-background:not(.has-grey-background-color) h4,
+.wp-block-group.has-background:not(.has-grey-background-color) h5,
+.wp-block-group.has-background:not(.has-grey-background-color) h6,
+.wp-block-group.has-background:not(.has-grey-background-color) p {
+  color: #fff;
+}
+/* TODO: Zit de site title optie voor switchen tussen h1 en p nog wel in het thema?*/
+.title-area h1.site-title a,
+.title-area p.site-title a {
+  color: #424242;
+}
+.nav-menu .menu-item a {
+  color: #424242;
+}
+.nav-menu .menu-item:hover > a {
+  background: #f5f5f5;
+}
+.nav-menu .menu-item.current-menu-item > a,
+.nav-menu .menu-item.current-menu-ancestor > a {
+  color: #05306f;
+}
+.nav-menu .submenu-expand svg {
+  fill: #757575;
+}
+
+/* TODO: Hebben we die media queries nodig?*/
+@media (min-width: 769px) {
+  .nav-menu .sub-menu {
+    background: #f5f5f5;
+  }
+  .nav-menu .sub-menu .menu-item:hover > a {
+    background: #eee;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu.active {
+    background: #eee;
+    border-top: 1px solid #e0e0e0;
+  }
+}
+.search-toggle:hover,
+.search-toggle.active,
+.menu-toggle:hover,
+.menu-toggle.active {
+  background: #eee;
+}
+.site-header .wrap .header-search.active .overlay {
+  background: #00000038;
+}
+.site-header.active::before {
+  background: #fff;
+  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.3);
+}
+.header-search {
+  background: #eee;
+}
+.post-summary__title a {
+  color: #212121;
+  text-decoration: none;
+}
+.post-summary__title a:hover {
+  color: #05306f;
+}
+.entry-category a {
+  color: #616161;
+  text-decoration: none;
+}
+.entry-category a:hover {
+  color: #05306f;
+}
+.author-title {
+  color: #616161;
+}
+.pagination {
+  border-top: 1px solid #e0e0e0;
+}
+.pagination ul li a {
+  color: #424242;
+}
+.pagination ul li:hover > a {
+  color: #05306f;
+}
+.pagination ul li.active > a {
+  background: #05306f;
+  color: #fff;
+}
+.entry-author a {
+  color: #424242;
+  text-decoration: none;
+}
+.breadcrumb a {
+  color: #424242;
+}
+.breadcrumb a:hover {
+  color: #05306f;
+}
+.single .breadcrumb {
+  border-top: 1px solid #e0e0e0;
+}
+.entry-comments .comment-list li {
+  border: 1px solid #eee;
+}
+.entry-comments .comment-list li.staff > article {
+  background: rgba(5, 48, 111, 0.05);
+  border-left: 2px solid #05306f;
+}
+.entry-comments .comment-list .comment-author {
+  color: #424242;
+}
+.entry-comments .comment-list .comment-author a {
+  color: #424242;
+}
+.entry-comments .comment-list .comment-author a:hover {
+  color: #05306f;
+}
+
+.entry-comments .comment-list .comment-meta {
+  color: #9e9e9e;
+}
+.entry-comments .comment-list .comment-meta a {
+  color: #9e9e9e;
+}
+.entry-comments .comment-list .comment-meta a:hover {
+  color: #05306f;
+}
+
+.entry-comments .comment-list ul.children li {
+  border-top: 1px solid #e0e0e0;
+}
+.footer-widgets {
+  background: #05306f;
+}
+
+.footer-widgets .widget-title {
+  color: #fff;
+}
+.footer-widgets a {
+  color: #fff;
+}
+.footer-widgets a svg {
+  fill: #fff;
+}
+
+.site-footer a {
+  color: rgba(255, 255, 255, 0.75);
+}
+.site-footer a:hover {
+  color: #fff;
+}
+.site-footer .backtotop svg {
+  fill: #fff;
+}
+.site-footer .backtotop:hover {
+  background: #000;
+}
+
+.has-primary-color {
+  color: var(--primaryColor);
+}
+.has-secondary-color {
+  color: var(--secondaryColor);
+}
+.has-primary-variation-color {
+  color: var(--primaryVariationColor);
+}
+.has-secondary-variation-color {
+  color: var(--secondaryVariationColor);
+}
+.has-black-custom-color {
+  color: var(--blackCustomColor);
+}
+.has-white-custom-color {
+  color: var(--whiteCustomColor);
+}
+.has-grey-custom-color {
+  color: var(--greyCustomColor);
+}
+
+.has-primary-background-color {
+  background: var(--primaryColor);
+}
+.has-secondary-background-color {
+  background: var(--secondaryColor);
+}
+.has-primary-variation-background-color {
+  background: var(--primaryVariationColor);
+}
+.has-secondary-variation-background-color {
+  background: var(--secondaryVariationColor);
+}
+.has-black-custom-background-color {
+  background: var(--blackCustomColor);
+}
+.has-white-custom-background-color {
+  background: var(--whiteCustomColor);
+}
+.has-grey-custom-background-color {
+  background: var(--greyCustomColor);
+}
+
+/* TODO: Hebben we de wp-block-button__link kleuren wel nodig?*/
+.wp-block-button__link.has-primary-color:hover,
+.wp-block-button__link.has-primary-color:focus {
+  color: var(--primaryColor);
+}
+.wp-block-button__link.has-primary-background-color:hover,
+.wp-block-button__link.has-primary-background-color:focus {
+  background-color: var(--primaryColor);
+}
+
+.wp-block-button__link.has-secondary-color:hover,
+.wp-block-button__link.has-secondary-color:focus {
+  color: var(--secondaryColor);
+}
+.wp-block-button__link.has-secondary-background-color:hover,
+.wp-block-button__link.has-secondary-background-color:focus {
+  background-color: var(--secondaryColor);
+}
+
+.wp-block-button__link.has-primary-variation-color:hover,
+.wp-block-button__link.has-primary-variation-color:focus {
+  color: var(--primaryVariationColor);
+}
+.wp-block-button__link.has-primary-variation-background-color:hover,
+.wp-block-button__link.has-primary-variation-background-color:focus {
+  background-color: var(--primaryVariationColor);
+}
+
+.wp-block-button__link.has-secondary-variation-color:hover,
+.wp-block-button__link.has-secondary-variation-color:focus {
+  color: var(--secondaryVariationColor);
+}
+.wp-block-button__link.has-secondary-variation-background-color:hover,
+.wp-block-button__link.has-secondary-variation-background-color:focus {
+  background-color: var(--secondaryVariationColor);
+}
+
+.wp-block-button__link.has-black-custom-color:hover,
+.wp-block-button__link.has-black-custom-color:focus {
+  color: var(--blackCustomColor);
+}
+.wp-block-button__link.has-black-custom-background-color:hover,
+.wp-block-button__link.has-black-custom-background-color:focus {
+  background-color: var(--blackCustomColor);
+}
+
+.wp-block-button__link.has-white-custom-color:hover,
+.wp-block-button__link.has-white-custom-color:focus {
+  color: var(--whiteCustomColor);
+}
+.wp-block-button__link.has-white-custom-background-color:hover,
+.wp-block-button__link.has-white-custom-background-color:focus {
+  background-color: var(--whiteCustomColor);
+}
+
+.wp-block-button__link.has-grey-custom-color:hover,
+.wp-block-button__link.has-grey-custom-color:focus {
+  color: var(--greyCustomColor);
+}
+.wp-block-button__link.has-grey-custom-background-color:hover,
+.wp-block-button__link.has-grey-custom-background-color:focus {
+  background-color: var(--greyCustomColor);
+}
