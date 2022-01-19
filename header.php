@@ -1,5 +1,4 @@
 <?php
-
 //
 // Header
 //
@@ -36,7 +35,7 @@ tha_body_top();
 	<?php tha_header_top();	?>
 
     		<div class="title-area">
-    			<?php echo '<p class="site-title"><a href="' . esc_url( home_url() ) . '" rel="home">' . get_bloginfo( 'name' )  . wa_svg_icon(['icon' => 'capybara']) . '</a></p >'; ?>
+    			<?php echo '<p class="site-title"><a href="' . esc_url( home_url() ) . '" rel="home">' . wa_svg_icon(['icon' => 'capybara']) . get_bloginfo( 'name' )  . '</a></p >'; ?>
     		</div> <!-- /.title-area -->
 
 	<?php tha_header_bottom(); ?>
@@ -56,3 +55,4 @@ tha_body_top();
 
 	<div class="site-container">
 	<div id="main-content"></div> <!-- div voor back-to-top in footer -->
+
