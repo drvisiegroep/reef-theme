@@ -8,6 +8,7 @@
 //
 // TODO: Uitleg + links remove_actions en json api
 // https://gist.github.com/Auke1810/f2a4cf04f2c07c74a393a4b442f22267
+// TODO: Uitzoeken welke apis uit mogen staan. Denk aan gutenberg en editor. Waar zijn de apis nodig?
 
 
 
@@ -48,6 +49,19 @@ function reef_admin_css() {
         <?php }
 }
 add_action('wp_head', 'reef_admin_css');
+
+
+
+//
+// Viewport en meta tags
+//
+function reef_header_meta_tags() {
+	echo '<meta charset="' . get_bloginfo( 'charset' ) . '">';
+	echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
+	echo '<link rel="profile" href="http://gmpg.org/xfn/11">';
+	echo '<link rel="pingback" href="' . get_bloginfo( 'pingback_url' ) . '">';
+}
+add_action( 'wp_head', 'reef_header_meta_tags' );
 
 
 
