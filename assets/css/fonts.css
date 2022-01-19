@@ -1,0 +1,47 @@
+:root {
+  --primaryFont: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif",
+    Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia,
+    serif;
+  --secondaryFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+body {
+  font-family: var(--secondaryFont);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--primaryFont);
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+}
+
+.entry-comments .comment-list .comment-author {
+  font-family: var(--primaryFont);
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+}
+
+code,
+pre {
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+}
+
+pre {
+  font-family: monospace, monospace;
+}
