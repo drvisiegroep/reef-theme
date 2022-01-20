@@ -21,7 +21,7 @@
 			
 				<?php dynamic_sidebar('footer-1'); ?>
 		
-			<a class="backtotop" href="#main-content"><?php wa_svg_icon(['icon' => 'arrow-up', 'size' => 24]); ?></a>
+			<!-- <a class="backtotop" href="#main-content"><?php wa_svg_icon(['icon' => 'arrow-up', 'size' => 24]); ?></a> -->
 		</div>
 
 	<?php tha_footer_bottom(); ?>
@@ -31,9 +31,9 @@
 
 	<div class="sub-footer">
 		<div class="wrap">
-
-			<?php dynamic_sidebar('footer-2'); ?>
-
+			<div class="sub-footer-menu">
+				<?php dynamic_sidebar('footer-2'); ?>
+			</div>
 		</div>
 	</div>
 </footer>

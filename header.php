@@ -54,5 +54,5 @@ tha_body_top();
 	?>
 
 	<div class="site-container">
-	<div id="main-content"></div> <!-- div voor back-to-top in footer -->
+	<!-- <div id="main-content"></div> div voor back-to-top in footer -->
 
