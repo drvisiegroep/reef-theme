@@ -1,4 +1,12 @@
 <?php
+//
+// Widgets
+//
+// @package      reef-theme
+// @author       Daniël R.
+// @since        1.0.0
+//
+
 add_action( 'widgets_init', 'reef_register_widgets' );
  
 function reef_register_widgets() {
@@ -7,8 +15,6 @@ function reef_register_widgets() {
         'id'                => 'primary-sidebar',
         'before_widget'     => '<div id="%1$s" class="widget %2$s">',
         'after_widget'      => '</div>',
-        'before_title'      => '<h2 class="widgettitle">',
-        'after_title'       => '</h2>',
         )
     );
     register_sidebar( array(
@@ -16,8 +22,6 @@ function reef_register_widgets() {
         'id'                => 'footer-1',
         'before_widget'     => '<div id="%1$s" class="widget %2$s">',
         'after_widget'      => '</div>',
-        'before_title'      => '<h2 class="widgettitle">',
-        'after_title'       => '</h2>',
         )
     );
     register_sidebar( array(
@@ -25,8 +29,6 @@ function reef_register_widgets() {
         'id'                => 'footer-2',
         'before_widget'     => '<div id="%1$s" class="widget %2$s">',
         'after_widget'      => '</div>',
-        'before_title'      => '<h2 class="widgettitle">',
-        'after_title'       => '</h2>',
         )
     );
 

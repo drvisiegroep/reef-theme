@@ -35,6 +35,8 @@ add_filter( 'allowed_block_types_all', 'our_allowed_block_types' );
 function our_allowed_block_types( $allowed_blocks ) {
  
 	return array(
+		// Reusable blocks
+		'core/block',
         // Tekst
 		'core/heading',
 		'core/paragraph',
@@ -50,10 +52,9 @@ function our_allowed_block_types( $allowed_blocks ) {
         'core/columns',
         // Widgets
         'core/shortcode',
-		//Patterns
-
 		//Embeds
-		
+		'core-embed/youtube',
+		'core-embed/vimeo',
 
 	);
  

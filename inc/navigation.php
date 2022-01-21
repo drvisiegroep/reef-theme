@@ -6,8 +6,6 @@
 // @author       Daniël R.
 // @since        1.0.0
 //
-// TODO: AMP functies eruit slopen.
-// TODO: ea_icon verwisselen met wa_svg_icon / wa_svg_icon uitbreiden met classes.
 
 //
 // Mobiel Menu

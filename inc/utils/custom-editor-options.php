@@ -9,6 +9,7 @@
 // Opties voor de Gütenberg editor
 // https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/
 //
+// TODO: font sizes toevoegen aan de css.
 
     
     // Font size uitzetten
@@ -47,14 +48,14 @@
                 'color'	=> '#94C35A',
             ),
             array(
-                'name'  => __( 'Secondary', 'reef-theme' ),
-                'slug'  => 'secondary',
-                'color' => '#5c911b',
-            ),
-            array(
                 'name'  => __( 'Primary-variation', 'reef-theme' ),
                 'slug'  => 'primary-variation',
-                'color'	=> '#0073aa',
+                'color'	=> '#5c911b',
+            ),
+            array(
+                'name'  => __( 'Secondary', 'reef-theme' ),
+                'slug'  => 'secondary',
+                'color' => '#0073aa',
             ),
             array(
                 'name'  => __( 'Secondary-variation', 'reef-theme' ),

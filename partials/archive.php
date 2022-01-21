@@ -24,6 +24,7 @@ echo '<article class="post-summary">';
 
 
 	// ea_entry_category();
+	// de first_term functie staat in helper-functions.php
 	$term = reef_first_term();
 	if( !empty( $term ) && ! is_wp_error( $term ) )
 		echo '<p class="entry-category"><a href="' . get_term_link( $term, 'category' ) . '">' . $term->name . '</a></p>';

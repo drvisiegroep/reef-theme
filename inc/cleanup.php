@@ -9,8 +9,16 @@
 // TODO: Uitleg + links remove_actions en json api
 // https://gist.github.com/Auke1810/f2a4cf04f2c07c74a393a4b442f22267
 // TODO: Uitzoeken welke apis uit mogen staan. Denk aan gutenberg en editor. Waar zijn de apis nodig?
+// TODO: Filter inlogpagina - niet weergeven of gebruiker bestaat of niet. filter aanpassen per errormessage?
 
-
+//
+// Generieke boodschap voor login error messages 
+// https://www.wpbeginner.com/wp-tutorials/how-to-disable-login-hints-in-wordpress-login-error-messages/
+//
+function wordpress_login_errors(){
+    return 'Inloggen mislukt...';
+  }
+add_filter( 'login_errors', 'no_wordpress_errors' );
 
 //
 // Minimize admin bar and show on hover
@@ -48,7 +56,7 @@ function reef_admin_css() {
         </style>
         <?php }
 }
-add_action('wp_head', 'reef_admin_css');
+// add_action('wp_head', 'reef_admin_css');
 
 
 

@@ -5,6 +5,7 @@
 // @package      reef-theme
 // @author       Daniël R.
 // @since        1.0.0
+//
 
 register_block_pattern_category(
     'custom',
@@ -86,19 +87,3 @@ function register_custom_block_patterns() {
 add_action( 'init', 'register_custom_block_patterns' );
 
 
-add_action('init', function() {
-	register_post_type('boeken', [
-		'label' => __('Boeken', 'reef-theme'),
-		'public' => true,
-		'show_in_rest' => true,
-       	'supports' => array('editor','title'),
-		'template' => [			
-			['core/cover', ['align' => 'full', 'overlayColor' => 'blauw'], [
-				['core/heading', ['align' => 'center', 'placeholder' => __('Uw titel', 'reef-theme')]],
-				['core/paragraph', ['align' => 'center', 'placeholder' => __('Uw tekst hier', 'reef-theme')]],
-				['core/button', ['align' => 'center']]
-			]],
-		],
-		'template_lock' => 'all',
-	]);
-});

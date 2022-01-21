@@ -1,7 +1,13 @@
 <?php
+//
+// Theme Support
+//
+// @package      reef-theme
+// @author       Daniël R.
+// @since        1.0.0
+//
 
-// Theme support voor de kleuren staat in editor options
-// disable-custom-font-sizes en disable-custom-colors
+// Theme support voor de kleuren staat in editor-options.php
 
 //
 // Registreer en laad hier je Wordpress functionaliteit

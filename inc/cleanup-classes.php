@@ -7,6 +7,7 @@
 // @since        1.0.0
 //
 // TODO: body classes opt out ipv opt in
+// 		'full-width-content','content-sidebar','content' nodig?
 
 
 
@@ -24,6 +25,8 @@ function reef_clean_body_classes( $classes ) {
 		'full-width-content',
 		'content-sidebar',
 		'content',
+		'home',
+		'error404',
 	];
 
 	return array_intersect( $classes, $allowed_classes );

@@ -6,8 +6,6 @@
 // @author       Daniël R.
 // @since        1.0.0
 //
-// TODO: Datumnotatie
-//
 
 //
 // Before entry
@@ -34,13 +32,13 @@ function reef_single_after_entry() {
 	reef_breadcrumbs();
 
 	// Publish date
-	echo '<p class="publish-date">Gepubliceerd op: ' . get_the_date( 'F j, Y' ) . '</p>';
+	echo '<p class="publish-date">Gepubliceerd op: ' . get_the_date( 'l F j, Y' ) . '</p>';
 
 
 	echo '</div>';
 
-	// If comments are open or we have at least one comment, load up the comment template.
-	if ( comments_open() || get_comments_number() ) :
+	// If comments are open load up the comment template.
+	if ( comments_open() ) :
 		comments_template();
 	endif;
 

@@ -7,7 +7,7 @@
 // @since        1.0.0
 //
 // TODO: Simplificeren waar nodig
-//
+// TODO: Willen we first term houden? Ref: archive.php en single.php
 
 function reef_first_term( $args = [] ) {
 

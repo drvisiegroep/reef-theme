@@ -11,6 +11,7 @@
 // TODO: url check regex  
 // TODO: pad als argument
 // TODO: refactor de 2 functies naar 1
+// Betere error check. 
 
 
 

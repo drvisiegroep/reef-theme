@@ -9,6 +9,7 @@
 // TODO: Verschillende includes voor banner. Hoe gaan we dat doen? handmatig met includes? if/else/case gebasseerd op admin options via acf?
 // TODO: Default banner
 // TODO: Paginas met content (header/footer/arcive/page etc.) meer consistent maken echos of html? 
+// TODO: Moet de h1 check er weer in?
 
 echo '<!DOCTYPE html>';
 tha_html_before();
@@ -47,10 +48,10 @@ tha_body_top();
 
 
 	<?php 
-		// $bgurl = get_the_post_thumbnail_url();
-		// if(empty($bgurl)){ $bgurl = get_field('ea_default_image', 'option'); }
-		// if(empty($bgurl)){ $bgurl = get_the_post_thumbnail_url(get_option( 'page_on_front' )); }
-		// echo '<div class="banner" style="background-image: url('. $bgurl .')"></div>';
+		$bgurl = get_the_post_thumbnail_url();
+		if(empty($bgurl)){ $bgurl = get_field('banner_afbeelding', 'option'); }
+		if(empty($bgurl)){ $bgurl = get_the_post_thumbnail_url(get_option( 'page_on_front' )); }
+		echo '<div class="banner" style="background-image: url('. $bgurl .')"></div>';
 	?>
 
 	<div class="site-container">
