@@ -80,9 +80,6 @@ cite{font-style:normal;}
 .site-inner{padding:36px 0;}
 /* Hebben we dit nodig? */
 .singular.content .site-inner > .wrap{max-width:800px;}
-/* Screen reader */
-.screen-reader-text,.screen-reader-text span,.screen-reader-shortcut{position:absolute !important;clip:rect(0, 0, 0, 0);height:1px;width:1px;border:0;overflow:hidden;}
-.screen-reader-text:focus,.screen-reader-shortcut:focus{clip:auto !important;height:auto;width:auto;display:block;font-size:1em;font-weight:bold;padding:15px 23px 14px;color:#333;background:#fff;z-index:100000;text-decoration:none;box-shadow:0 0 2px 2px rgba(0, 0, 0, 0.6);}
 
 /* Input */
 input,select,textarea{background:#fff;border:1px solid #e0e0e0;border-radius: 4px;color:#424242;font-size:18px;line-height:24px;padding:14px 16px;width:100%;}
@@ -127,7 +124,7 @@ h4,h5,h6{font-size:18px;}
   GUTENBERG BLOCKS
   ----------------
 */
-.wp-block{max-width:var(--siteWidth)}
+.wp-block:not([data-align="full"]){max-width:var(--siteWidth)}
 .alignfull {margin-left: calc(50% - 50vw)!important;margin-right:calc(50% - 50vw)!important;width:unset!important;max-width:unset!important;}
 
 /* TODO: bestaande blokken restylen? */ 
