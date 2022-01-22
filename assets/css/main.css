@@ -141,8 +141,9 @@ h4,h5,h6{font-size:18px;}
   GUTENBERG BLOCKS
   ----------------
 */
-/* style editor fix voor alignfull */
+/* style editor fix voor alignfull en fix voor herbruikbare blokken */
 .wp-block:not([data-align="full"]){max-width:var(--siteWidth)}
+.block-editor-block-list__block.wp-block.is-reusable{max-width: unset;}
 .alignfull {margin-left: calc(50% - 50vw)!important;margin-right:calc(50% - 50vw)!important;width:unset!important;max-width:unset!important;}
 
 /* TODO: bestaande blokken restylen? */ 
