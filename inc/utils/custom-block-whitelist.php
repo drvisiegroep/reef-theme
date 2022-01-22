@@ -60,6 +60,8 @@ function our_allowed_block_types( $allowed_blocks ) {
 		//Embeds
 		'core-embed/youtube',
 		'core-embed/vimeo',
+		//custom blocks
+		'wa/myblock'
 
 	);
  
