@@ -1,4 +1,8 @@
-/* TODO: small medium large font */
+/* 
+TODO: small medium large font behalve p?
+TODO: kleur menu dropdowns
+*/
+
 
 /* 
   Variabelen
@@ -23,6 +27,14 @@
   /* .site-main margin boven en onder. Mobiel vanaf 768 */
   --siteContentMargin: 80px;
   --siteContentMarginMobile: 36px;
+
+  /* Buttons */
+  --buttonFontSize: 16px;
+  --buttonPadding: 13px 26px;
+  --buttonBorderRadius: 5px;
+  --buttonColor: var(--whiteCustomColor);
+  --buttonBackgroundColor: var(--primaryColor);
+  --buttonHoverBackgroundColor: var(--primaryVariationColor);
 
   /* Header */
   --siteTitleIconMaxHeight: 100px;
@@ -109,7 +121,6 @@ a{color:var(--primaryColor);text-decoration: none;}
 a:hover{text-decoration:none;color:var(--primaryVariationColor);}
 p{color:var(--blackCustomColor);margin:0 0 16px;padding:0;}
 
-/* TODO: Aanpassen maar editor options */
 p.large,p.has-large-font-size{font-size:21px;}
 p.has-normal-font-size{font-size:18px;}
 p.small,p.has-small-font-size{font-size:14px;}
@@ -130,6 +141,7 @@ h4,h5,h6{font-size:18px;}
   GUTENBERG BLOCKS
   ----------------
 */
+/* style editor fix voor alignfull */
 .wp-block:not([data-align="full"]){max-width:var(--siteWidth)}
 .alignfull {margin-left: calc(50% - 50vw)!important;margin-right:calc(50% - 50vw)!important;width:unset!important;max-width:unset!important;}
 
@@ -141,8 +153,8 @@ h4,h5,h6{font-size:18px;}
 .wp-block-columns{}
 .wp-block-image{}
 
-.wp-block-button__link{background-color: var(--primaryColor);color:var(--whiteCustomColor);border-radius:3px;font-size:20px;font-weight:700;line-height:32px;padding:16px 32px;text-decoration:none;}
-.wp-block-button__link:active, .wp-block-button__link:focus, .wp-block-button__link:hover, .wp-block-button__link:visited {background-color: var(--primaryVariationColor);color: #fff;}
+.wp-block-button__link, button[type="submit"]{background-color: var(--buttonBackgroundColor);color:var(--buttonColor);border-radius:var(--buttonBorderRadius);font-size:var(--buttonFontSize);font-weight:700;line-height:24px;padding:var(--buttonPadding);text-decoration:none;text-transform: uppercase;}
+.wp-block-button__link:active, .wp-block-button__link:focus, .wp-block-button__link:hover, .wp-block-button__link:visited, button[type="submit"]:active, button[type="submit"]:focus, button[type="submit"]:hover, button[type="submit"]:visited{background-color: var(--buttonHoverBackgroundColor);color: #fff;}
 .is-style-full .wp-block-button__link,.wp-block-button__link.full{display:block;width:100%;}
 
 .has-primary-color{color:var(--primaryColor);}
