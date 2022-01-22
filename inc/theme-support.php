@@ -76,6 +76,9 @@ function reef_setup() {
     //Block styles
     add_theme_support('wp-block-styles');
 
+    // Block templates
+    add_theme_support('block-templates');
+
     }
 endif;
 add_action( 'after_setup_theme', 'reef_setup' );
