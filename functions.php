@@ -12,12 +12,15 @@
 // TODO: Content width? Hebben we dat nodig?
 // TODO: Willen we verschillende layouts?
 
-// Global options
-add_action( 'after_setup_theme', 'parent_globals', 1 );
-function parent_globals() {
-    global $logo_text;
-    $logo_text = false;
+// Global site options
+if( !function_exists('site_settings') ) {
+    function site_settings() {
+        global $logo_text;
+        $logo_text = false;
+    }
 }
+add_action( 'after_setup_theme', 'site_settings');
+
 
 //
 // Includes
@@ -34,7 +37,7 @@ include( get_template_directory() . '/inc/helper-functions.php' );
 include( get_template_directory() . '/inc/theme-support.php' );
 include( get_template_directory() . '/inc/widgets.php' );
 
-// Utilities
+// Custom
 include( get_template_directory() . '/inc/custom/svg-link-shortcode.php');
 include( get_template_directory() . '/inc/custom/custom-post-types.php');
 include( get_template_directory() . '/inc/custom/custom-block-whitelist.php');
@@ -61,4 +64,4 @@ if(current_user_can('manage_options') == 1) {
     show_admin_bar(false);
 }
 
-do_action('parent_loaded');
+
