@@ -22,19 +22,19 @@ echo '<article class="post-summary">';
 
 	echo '<div class="post-summary__content">';
 
+		// ea_post_summary_title();
+		global $wp_query;
+		$tag = ( is_singular() || -1 === $wp_query->current_post ) ? 'h3' : 'h2';
+		echo '<' . $tag . ' class="post-summary__title"><a href="' . get_permalink() . '">' . get_the_title() . '</a></' . $tag . '>';
 
-	// ea_entry_category();
-	// de first_term functie staat in helper-functions.php
-	$term = reef_first_term();
-	if( !empty( $term ) && ! is_wp_error( $term ) )
-		echo '<p class="entry-category"><a href="' . get_term_link( $term, 'category' ) . '">' . $term->name . '</a></p>';
+		// ea_entry_category();
+		// de first_term functie staat in helper-functions.php
+		$term = reef_first_term();
+		if( !empty( $term ) && ! is_wp_error( $term ) )
+			echo '<p class="entry-category"><a href="' . get_term_link( $term, 'category' ) . '">' . $term->name . '</a></p>';
 
-
-	// ea_post_summary_title();
-	global $wp_query;
-	$tag = ( is_singular() || -1 === $wp_query->current_post ) ? 'h3' : 'h2';
-	echo '<' . $tag . ' class="post-summary__title"><a href="' . get_permalink() . '">' . get_the_title() . '</a></' . $tag . '>';
-
+		// The excerpt
+		echo '<div class="post-summary__excerpt">' . get_the_excerpt() . '</div>';
 
 	echo '</div> <!-- .post-summary__content-->';
 
