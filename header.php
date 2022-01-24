@@ -11,6 +11,8 @@
 // TODO: Paginas met content (header/footer/arcive/page etc.) meer consistent maken echos of html? 
 // TODO: Moet de h1 check er weer in?
 
+global $logo_text;
+
 echo '<!DOCTYPE html>';
 tha_html_before();
 echo '<html ' . get_language_attributes() . '>';
@@ -36,7 +38,11 @@ tha_body_top();
 	<?php tha_header_top();	?>
 
     		<div class="title-area">
-    			<?php echo '<p class="site-title"><a href="' . esc_url( home_url() ) . '" rel="home">' . wa_svg_icon(['icon' => 'capybara']) . get_bloginfo( 'name' )  . '</a></p >'; ?>
+    			<?php
+					echo '<p class="site-title"><a href="' . esc_url( home_url() ) . '" rel="home">' . wa_svg_icon(['icon' => 'capybara']);
+					if($logo_text) echo get_bloginfo( 'name' );
+				 	echo '</a></p >';
+				?>
     		</div> <!-- /.title-area -->
 
 	<?php tha_header_bottom(); ?>
@@ -55,5 +61,5 @@ tha_body_top();
 	?>
 
 	<div class="site-container">
-	<!-- <div id="main-content"></div> div voor back-to-top in footer -->
+
 
