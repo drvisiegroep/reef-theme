@@ -26,7 +26,7 @@
 	<!-- <div class="sub-footer">
 		<div class="wrap">
 			<div class="sub-footer-menu">
-				<?php dynamic_sidebar('footer-2'); ?>
+				<?php // dynamic_sidebar('footer-2'); ?>
 			</div>
 		</div>
 	</div> -->

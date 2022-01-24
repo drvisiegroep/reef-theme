@@ -24,13 +24,13 @@ function reef_register_widgets() {
         'after_widget'      => '</div>',
         )
     );
-    register_sidebar( array(
-        'name'              => esc_html__('footer-2', 'reef-theme'),
-        'id'                => 'footer-2',
-        'before_widget'     => '<div id="%1$s" class="widget %2$s">',
-        'after_widget'      => '</div>',
-        )
-    );
+    // register_sidebar( array(
+    //     'name'              => esc_html__('footer-2', 'reef-theme'),
+    //     'id'                => 'footer-2',
+    //     'before_widget'     => '<div id="%1$s" class="widget %2$s">',
+    //     'after_widget'      => '</div>',
+    //     )
+    // );
 
 }
 ?>
