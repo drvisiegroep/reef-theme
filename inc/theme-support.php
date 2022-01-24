@@ -6,6 +6,7 @@
 // @author       Daniël R.
 // @since        1.0.0
 //
+// TODO: block-templates uitzetten als we die niet gebruiken
 
 // Theme support voor de kleuren staat in editor-options.php
 
@@ -74,10 +75,10 @@ function reef_setup() {
     add_theme_support( 'align-wide' );
     
     //Block styles
-    add_theme_support('wp-block-styles');
+    // add_theme_support('wp-block-styles');
 
     // Block templates
-    add_theme_support('block-templates');
+    // add_theme_support('block-templates');
 
     }
 endif;
