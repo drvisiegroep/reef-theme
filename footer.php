@@ -15,20 +15,22 @@
 
 		<div class="footer-menu">
 				<?php dynamic_sidebar('footer-1'); ?>
-			<!-- <a class="backtotop" href="#main-content"><?php wa_svg_icon(['icon' => 'arrow-up', 'size' => 24]); ?></a> -->
 		</div>
 
 	<?php tha_footer_bottom(); ?>
 
+	<div class="madebywa">Deze website wordt u aangeboden door <a href="https://www.websiteaanbieder.nl">Websiteaanbieder</a></div>
+	
 	</div> <!-- .wrap -->
 
-	<div class="sub-footer">
+	<!-- <div class="sub-footer">
 		<div class="wrap">
 			<div class="sub-footer-menu">
 				<?php dynamic_sidebar('footer-2'); ?>
 			</div>
 		</div>
-	</div>
+	</div> -->
+
 </footer>
 
 <?php
