@@ -1,6 +1,6 @@
 /* 
 TODO: small medium large font behalve p?
-TODO: kleur menu dropdowns
+TODO: kleur menu dropdowns onderverdelen mobiel / desktop / onscroll ?
 */
 
 
@@ -18,14 +18,14 @@ TODO: kleur menu dropdowns
   --greyCustomColor:#d5d2cd;
 
   /* Fonts */
-  --primaryFont:Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
-  --secondaryFont:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --primaryFont:'Roboto', sans-serif;
+  --secondaryFont:var(--primaryFont);
 
   /* Breedte wrapper, inner blocks en zoekveld wrap */
   --siteWidth: 1200px;
 
   /* .site-main margin boven en onder. Mobiel vanaf 768 */
-  --siteContentMargin: 80px;
+  --siteContentMarginDesktop: 80px;
   --siteContentMarginMobile: 36px;
 
   /* Buttons */
@@ -38,9 +38,12 @@ TODO: kleur menu dropdowns
 
   /* Header */
   --siteTitleIconMaxHeight: 100px;
-  --subMenuBackgroundColor: red;
-  --subMenuBackgroundColorHover: green;
+  --subMenuBackgroundColor: #eee;
+  --subMenuBackgroundColorHover: #fefefe;
+  --subMenuBackgroundColorOnScroll: #eee;
+  --menuBackgroundColorMobile: #eee;
   --menuWidthOnScroll: 215px;
+
   /* Footer */
   --siteFooterIconMaxWidth: 40px;
 }
@@ -112,7 +115,7 @@ input:focus::-webkit-input-placeholder,input:focus::-moz-placeholder,input:focus
 /* Search */
 .search-form{max-width:400px;position:relative;overflow:hidden;}
 .search-form .search-field{border:none;padding-right:44px;width:100%;}
-.search-form .search-submit{background:transparent;border:none;padding:0;margin:0;min-width:0;width:44px;height:44px;line-height:0;text-align:center;position:absolute;top:50%;margin-top:-22px;right:0;}
+.search-form .search-submit{background:transparent;border:none;padding:0;margin:0;min-width:0;width:44px;height:44px;line-height:0;text-align:center;position:absolute;top:50%;margin-top:-22px;right:4px;}
 .search-form .search-submit svg{fill:var(--secondaryColor);width:20px;height:20px;}
 .search-form .search-submit svg:hover{fill:var(--secondaryVariationColor);}
 
@@ -152,6 +155,7 @@ h4,h5,h6{font-size:18px;}
 /* Meest gebruikte blokken voor content */
 .wp-block-media-text{grid-template-columns: 1fr 1fr;gap: 20px}
 .wp-block-media-text .wp-block-media-text__content{padding: 0}
+.wp-block-media-text{}
 .wp-block-group{}
 .wp-block-columns{}
 .wp-block-image{}
@@ -203,7 +207,7 @@ img.alignleft{float:left;margin:0 20px 20px 0;}
 img.alignright{float:right;margin:0 0 20px 20px;}
 img.aligncenter{margin-left:auto;margin-right:auto;}
 
-.wp-block-image figcaption{color:var(--blackCustomColor);}
+.wp-block-image figcaption{color:var(--blackCustomColor);display: none;}
 .wp-block-table{border-collapse:collapse;width:100%;}
 .wp-block-table td,.wp-block-table th{padding:0.5em;border:1px solid;}
 .wp-block-group{padding:40px 16px;}
@@ -211,6 +215,17 @@ img.aligncenter{margin-left:auto;margin-right:auto;}
 .wp-block-group .wp-block-group__inner-container{max-width:var(--siteWidth);margin:0 auto;}
 .wp-block-group .wp-block-group__inner-container:after{content:"";display:table;clear:both;}
 .wp-block-group .wp-block-group__inner-container > *:last-child{margin-bottom:0;}
+
+/* 
+  -----------------------
+  CUSTOM GUTENBERG BLOCKS
+  -----------------------
+*/
+
+/* vinkjes in media/text block*/
+/* .wp-block-media-text ul li {list-style-type: none;position:relative}
+.wp-block-media-text ul li::before{content: '';background: url(../svg/check-solid.svg) no-repeat center center;width:10px;height:10px;display:block;position:absolute;} */
+
 /* 
   --------
   HEADER
@@ -225,7 +240,7 @@ img.aligncenter{margin-left:auto;margin-right:auto;}
 .site-header.active::before{background:#fff;box-shadow:2px 0px 10px rgba(0, 0, 0, 0.3);content:'';width:111px;height:48px;position:fixed;top:0;right:0;z-index:10;border-radius:0 0 0 15px;}
 .site-header.active .wrap > .menu-toggle,.site-header.active .wrap > .search-toggle{display:block;position:fixed;top:0;right:0;z-index:10;}
 .site-header.active .wrap > .menu-toggle{right:48px;}
-.site-header.active .wrap .nav-menu.active{display:block;margin:0;position:fixed;top:80px;right:0;z-index:10;width:auto;background: #eee;}
+.site-header.active .wrap .nav-menu.active{display:block;margin:0;position:fixed;top:80px;right:0;z-index:10;width:auto;background: var(--subMenuBackgroundColorOnScroll);}
 .site-header.active .wrap .nav-menu.active .nav-primary{-webkit-box-pack:start;justify-content:start;}
 .site-header.active .wrap .nav-menu.active .nav-primary ul{width: var(--menuWidthOnScroll);}
 .site-header.active .wrap .nav-menu.active li{float:unset;}
@@ -268,16 +283,18 @@ body.admin-bar{margin-top:32px;}
   CONTENT
   -------
 */
-.post-summary {  margin-bottom: 32px;}
+.post-summary {  margin-bottom: 32px;display: grid;grid-template-columns: 20% 1fr;gap: 32px}
 .post-summary__title {  font-size: 18px;  font-weight: 400;  margin: 0;}
 .post-summary__title a {  color: inherit;  text-decoration: none;}
 .post-summary__title a:hover {  color: var(--primaryVariationColor);}
 .post-summary__image {  display: block;}
+.post-summary__image img {height: 100%;object-fit:cover}
 
 .entry-category{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;}
 .entry-category a{color:inherit;text-decoration:none;}
 .entry-category a:hover{color:var(--primaryVariationColor);}
 
+.archive .site-main {display:grid;grid-template-columns: repeat(2, 1fr);gap: 32px;}
 .archive .site-main .no-results{grid-column:1 / -1;margin-bottom:48px;}
 .archive-description{text-align:center;width:100%;max-width:768px;margin:0 auto 32px;}
 .archive-description > *:last-child{margin-bottom:0;}
@@ -327,7 +344,7 @@ body.admin-bar{margin-top:32px;}
 .singular .entry-header *:last-child{margin-bottom:0;}
 
 .after-entry > *{margin:24px 0;}
-.after-entry .publish-date{font-size:16px;text-align:center;}
+.after-entry .publish-date{font-size:16px;text-align:left;}
 
 /* Comments*/
 .entry-comments .comment-list{margin:0 0 32px;}
@@ -344,7 +361,7 @@ body.admin-bar{margin-top:32px;}
 .entry-comments .comment-list .comment-meta a{color:var(--secondaryColor);font-weight:400;text-decoration:none;}
 .entry-comments .comment-list .comment-meta a:hover{color:var(--secondaryVariationColor);}
 .entry-comments .comment-list .comment-content p:last-child{margin:0;}
-.entry-comments .comment-list .comment-reply-link{position:absolute;top:16px;right:16px;font-size:16px;text-transform:uppercase;text-decoration:none;}
+.entry-comments .comment-list .comment-reply-link{position:absolute;top:16px;right:16px;font-size:16px;text-transform:uppercase;text-decoration:none;font-family:var(--secondaryFont);}
 .entry-comments .comment-list ul.children{margin:0;}
 .entry-comments .comment-list ul.children li{border-top:1px solid #e0e0e0;}
 
@@ -352,7 +369,7 @@ body.admin-bar{margin-top:32px;}
 .nav-links .nav-previous{float:left;}
 .nav-links .nav-next{float:right;}
 
-.comment-navigation a{font-size:20px;text-transform:uppercase;text-decoration:none;}
+.comment-navigation a{font-size:20px;text-transform:uppercase;text-decoration:none;font-family: var(--secondaryFont)}
 .comment-respond{margin:30px 0;}
 .comment-respond label{display:block;margin-right:12px;}
 .comment-respond label[for="subscribe"],.comment-respond label[for="wp-comment-cookies-consent"]{display:inline-block;}
@@ -362,10 +379,11 @@ body.admin-bar{margin-top:32px;}
   FOOTER
   ------
 */
-.site-footer{font-size:14px;padding:32px 0;background-color: var(--secondaryColor);}
+.site-footer{font-size:14px;padding: 32px 0 16px 0;background-color: var(--secondaryColor);}
 .site-footer a{color:var(--whiteCustomColor);opacity: 0.75;}
 .site-footer a:hover{opacity:1;}
-.site-footer .sub-footer-menu .widget:last-child {text-align: end;}
+.site-footer .madebywa{font-size: 12px;color: #fff;text-align:right;opacity: 0.8;font-family: monospace;}
+
 /* TODO: Betere oplossing voor maken */
 .site-footer div > div {padding-top: 0}
 .site-footer .icon {max-width: var(--siteFooterIconMaxWidth)}
@@ -373,7 +391,7 @@ body.admin-bar{margin-top:32px;}
 .site-footer .footer-menu {display:grid;  grid-template-columns: 1fr 1fr;   grid-template-rows: 1fr 1fr; }
 .site-footer .sub-footer-menu {display:grid;  grid-template-columns: 1fr 1fr;   grid-template-rows: 1fr; }
 .site-footer .footer-menu ul li,.site-footer .sub-footer-menu ul li{list-style-type:none}
-.site-footer .sub-footer-menu .widget:last-child {text-align: end;}
+.site-footer .sub-footer-menu .widget:last-child > *{text-align: end;display:flex;justify-content: flex-end;}
 
 /* Footer widget edtor styles */
 /* TODO: Editor styles worden niet geladen op de widget editor. Andere oplossing voor vinden */
@@ -427,7 +445,7 @@ div[data-widget-area-id="footer-1"] ul li, div[data-widget-area-id="footer-2"] u
   .nav-menu .sub-menu .menu-item {float: none;  }
   .nav-menu .sub-menu .menu-item:hover > a {background:  var(--subMenuBackgroundColorHover);  }
   .nav-menu .sub-menu .sub-menu {margin: -48px 0 0 215px;  }
-  .post-summary__image {margin-bottom: 12px;  }
+  .post-summary__image {margin-bottom: 12px;}
   .site-header.active .nav-menu.active .sub-menu .sub-menu {margin: -48px 0 0 -215px;}
 }
 
@@ -464,7 +482,7 @@ div[data-widget-area-id="footer-1"] ul li, div[data-widget-area-id="footer-2"] u
   .nav-menu .nav-secondary .menu-item.search {padding: 4px 16px 16px;}
   .nav-menu .nav-primary .menu-item.search {display: none;}
   .nav-menu {display: none;  }
-  .nav-menu.active {background: #eee;border-top: 1px solid #e0e0e0;display: block;margin: 0;max-width: 100%;  } 
+  .nav-menu.active {background: var(--menuBackgroundColorMobile);border-top: 1px solid #e0e0e0;display: block;margin: 0;max-width: 100%;  } 
   .nav-menu .menu > .menu-item > a {padding: 11px 18px;  }
   .nav-menu .submenu-expand {top: 0;right: 0;-webkit-transform: none;transform: none;width: 44px;height: 44px;  }
   .nav-menu .submenu-expand svg {width: 12px;height: 12px;  }
@@ -500,7 +518,7 @@ div[data-widget-area-id="footer-1"] ul li, div[data-widget-area-id="footer-2"] u
 @media (min-width: 769px) {
   .site-header .wrap > .menu-toggle,
   .site-header .wrap > .search-toggle {display: none;  }
-  .site-main {margin: var(--siteContentMargin) 0;}
+  .site-main {margin: var(--siteContentMarginDesktop) 0;}
 }
 @media (max-width: 782px) {
   #wpadminbar {display: none !important;}
