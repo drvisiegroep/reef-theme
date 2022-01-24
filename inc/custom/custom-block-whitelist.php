@@ -33,13 +33,11 @@
 // Om dit op te lossen moet 'core/button' ook otoegevoegd worden.
 // Eenzelfde soort bug zit in het toevoegen van patterns. Als je een column block hebt toegevoegd moet je zowel 'core/columns' als 'core/column' whitelisten.
 
-add_filter( 'allowed_block_types_all', 'our_allowed_block_types' );
+// add_filter( 'allowed_block_types_all', 'our_allowed_block_types' );
  
 function our_allowed_block_types( $allowed_blocks ) {
  
 	return array(
-		// Reusable blocks
-		'core/block',
         // Tekst
 		'core/heading',
 		'core/paragraph',
@@ -61,7 +59,9 @@ function our_allowed_block_types( $allowed_blocks ) {
 		'core-embed/youtube',
 		'core-embed/vimeo',
 		//custom blocks
-		'wa/myblock'
+		'wa/myblock',
+		// Reusable blocks
+		'core/block',
 
 	);
  

@@ -20,7 +20,7 @@ add_action('init', function() {
 		'label' => __('Boeken', 'reef-theme'),
 		'public' => true,
 		'show_in_rest' => true,
-       	'supports' => array('editor','title'),
+       	'supports' => array('editor','title', 'excerpt', 'thumbnail'),
 		'template' => [			
 			['core/cover', ['align' => 'full', 'overlayColor' => 'primary'], [
 				['core/heading', ['align' => 'center', 'placeholder' => __('Uw titel', 'reef-theme')]],

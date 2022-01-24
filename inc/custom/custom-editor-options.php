@@ -10,13 +10,18 @@
 // https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/
 //
 // TODO: font sizes toevoegen aan de css.
+//
+// !!! Zorg ervoor dat deze waardes worden overgenomen in dke CSS !!!
+//
 
-    
     // Font size uitzetten
     add_theme_support( 'disable-custom-font-sizes' );
 
     // Kleuren uitzetten
     add_theme_support( 'disable-custom-colors' );
+    
+    // Gradients picker uitzetten
+    add_theme_support( 'disable-custom-gradients' );
     
     // Voeg hier je eigen font-sizes toe
     add_theme_support( 'editor-font-sizes', array(
