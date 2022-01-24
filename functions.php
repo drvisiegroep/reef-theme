@@ -12,6 +12,12 @@
 // TODO: Content width? Hebben we dat nodig?
 // TODO: Willen we verschillende layouts?
 
+// Global options
+add_action( 'after_setup_theme', 'parent_globals', 1 );
+function parent_globals() {
+    global $logo_text;
+    $logo_text = false;
+}
 
 //
 // Includes
@@ -29,34 +35,14 @@ include( get_template_directory() . '/inc/theme-support.php' );
 include( get_template_directory() . '/inc/widgets.php' );
 
 // Utilities
-include( get_template_directory() . '/inc/utils/svg-link-shortcode.php' );
-include( get_template_directory() . '/inc/utils/custom-post-types.php');
-include( get_template_directory() . '/inc/utils/custom-block-whitelist.php');
-include( get_template_directory() . '/inc/utils/custom-patterns.php');
-include( get_template_directory() . '/inc/utils/custom-editor-options.php');
-include( get_template_directory() . '/inc/utils/custom-blocks.php');
-include( get_template_directory() . '/inc/utils/custom-fonts.php');
-
-//
-// Laad hier de styles en scripts.
-//
-function reef_scripts() {
-    
-    wp_enqueue_style( 'css-reef-theme-main', get_template_directory_uri() . '/assets/css/main.css', array(), filemtime( get_template_directory() . '/assets/css/main.css' ) );
-    wp_enqueue_script( 'js-reef-theme-main', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery' ), filemtime( get_template_directory() . '/assets/js/main.js' ), true );
-    
-    if( ! is_admin() ) {
-        wp_deregister_script( 'jquery' );
-        wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
-        wp_enqueue_script( 'jquery' );
-    }
-}
-add_action( 'wp_enqueue_scripts', 'reef_scripts' );
-
-
-
-/* Editor styles */
-add_editor_style( 'assets/css/main.css' );
+include( get_template_directory() . '/inc/custom/svg-link-shortcode.php');
+include( get_template_directory() . '/inc/custom/custom-post-types.php');
+include( get_template_directory() . '/inc/custom/custom-block-whitelist.php');
+include( get_template_directory() . '/inc/custom/custom-patterns.php');
+include( get_template_directory() . '/inc/custom/custom-editor-options.php');
+include( get_template_directory() . '/inc/custom/custom-blocks.php');
+include( get_template_directory() . '/inc/custom/custom-enqueue.php');
+include( get_template_directory() . '/inc/custom/custom-forms.php');
 
 
 
@@ -74,3 +60,5 @@ if(current_user_can('manage_options') == 1) {
 } else {
     show_admin_bar(false);
 }
+
+do_action('parent_loaded');
