@@ -55,8 +55,6 @@ function reef_reusable_blocks_admin_menu() {
 }
 add_action( 'admin_menu', 'reef_reusable_blocks_admin_menu' );
 
-
-
 // Admin bar alleen laten zien als user admin toegang of admin rechten heeft heeft
 if(current_user_can('manage_options') == 1) {
     show_admin_bar(true);
