@@ -12,6 +12,10 @@
 // Dit menu gaat via de tha_header_bottom hook naar de pagina.
 // tha_header_bottom staat in header.php
 //
+// Menus registreren gebeurd in theme-support.php en kan in een child thema met de reef_setup() functie worden uitgevoerd.
+//
+
+
 function reef_site_header() {
 	echo reef_mobile_menu_toggle();
 	echo reef_search_toggle();
