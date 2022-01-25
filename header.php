@@ -38,11 +38,11 @@ tha_body_top();
 	<?php tha_header_top();	?>
 
     		<div class="title-area">
-    			<?php
-					echo '<p class="site-title"><a href="' . esc_url( home_url() ) . '" rel="home">' . wa_svg_icon(['icon' => 'capybara']);
-					if($logo_text) echo get_bloginfo( 'name' );
-				 	echo '</a></p >';
-				?>
+
+				<p class="site-title"><a href="<?php echo esc_url( home_url() );?>" rel="home"><?php echo wa_svg_icon(['icon' => 'capybara']); ?>
+					<?php if($logo_text) echo get_bloginfo( 'name' ); ?>
+				</a></p>
+
     		</div> <!-- /.title-area -->
 
 	<?php tha_header_bottom(); ?>
