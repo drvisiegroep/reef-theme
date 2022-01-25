@@ -27,6 +27,7 @@ function reef_clean_body_classes( $classes ) {
 		'content',
 		'home',
 		'error404',
+		'wp-embed-repsonsive'
 	];
 
 	return array_intersect( $classes, $allowed_classes );
