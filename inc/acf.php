@@ -22,13 +22,20 @@ function my_acf_op_init() {
         $parent = acf_add_options_page(array(
             'page_title'  => __('Algemene Settings'),
             'menu_title'  => __('Algemene Settings'),
-            'redirect'    => false,
+            'redirect'    => true,
         ));
 
-        // Add sub page.
+        // Add header settings sub page.
         $child = acf_add_options_sub_page(array(
             'page_title'  => __('Header Settings'),
             'menu_title'  => __('Header'),
+            'parent_slug' => $parent['menu_slug'],
+        ));
+
+        // Add footer settings sub page.
+        $child = acf_add_options_sub_page(array(
+            'page_title'  => __('Footer Settings'),
+            'menu_title'  => __('Footer'),
             'parent_slug' => $parent['menu_slug'],
         ));
     }
