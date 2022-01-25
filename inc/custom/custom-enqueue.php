@@ -22,5 +22,8 @@ function reef_scripts() {
 add_action( 'wp_enqueue_scripts', 'reef_scripts' );
 
 /* Editor styles */
-add_editor_style( 'assets/css/main.css' );
-add_editor_style( 'https://fonts.googleapis.com/css?family=Roboto:wght@300;400;700&display=swap' );
+function reef_editor_styles () {
+    add_editor_style( 'assets/css/main.css' );
+    add_editor_style( 'https://fonts.googleapis.com/css?family=Roboto:wght@300;400;700&display=swap' );
+}
+add_action( 'after_setup_theme', 'reef_editor_styles');
