@@ -5,7 +5,9 @@ TODO: kleur menu dropdowns onderverdelen mobiel / desktop / onscroll ?
 
 
 /* 
+  ----------
   Variabelen
+  ----------
 */
 :root{
   /* Kleuren */
@@ -38,11 +40,22 @@ TODO: kleur menu dropdowns onderverdelen mobiel / desktop / onscroll ?
 
   /* Header */
   --siteTitleIconMaxHeight: 100px;
+  --menuTextColor: var(--primaryColor);
+  --menuLetterSpacing: 0;
+  --menuCurrentItemColor: var(--secondaryColor);
+  --menuTextTransform: inherit;
+  --menuItemHoverColor: var(--blackCustomColor);
+  --menuItemHoverBackground: inherit;
   --subMenuBackgroundColor: #eee;
   --subMenuBackgroundColorHover: #fefefe;
   --subMenuBackgroundColorOnScroll: #eee;
   --menuBackgroundColorMobile: #eee;
   --menuWidthOnScroll: 215px;
+  --searchSubmitSVG: #000;
+  --searchSubmitSVGHover: #000;
+
+  /* Images */
+  --siteMainFigureBorderRadius: 5px;
 
   /* Footer */
   --siteFooterIconMaxWidth: 40px;
@@ -116,8 +129,8 @@ input:focus::-webkit-input-placeholder,input:focus::-moz-placeholder,input:focus
 .search-form{max-width:400px;position:relative;overflow:hidden;}
 .search-form .search-field{border:none;padding-right:44px;width:100%;}
 .search-form .search-submit{background:transparent;border:none;padding:0;margin:0;min-width:0;width:44px;height:44px;line-height:0;text-align:center;position:absolute;top:50%;margin-top:-22px;right:4px;}
-.search-form .search-submit svg{fill:var(--secondaryColor);width:20px;height:20px;}
-.search-form .search-submit svg:hover{fill:var(--secondaryVariationColor);}
+.search-form .search-submit svg{fill:var(--searchSubmitSVG);width:20px;height:20px;}
+.search-form .search-submit svg:hover{fill:var(--searchSubmitSVGHover);}
 
 body{color:var(--blackCustomColor);font-family:var(--primaryFont);font-size:18px;font-weight:400;line-height:1.55;margin:0;}
 .site-main {margin: var(--siteContentMarginMobile) 0;}
@@ -206,6 +219,7 @@ img{display:block;max-width:100%;height:auto;}
 img.alignleft{float:left;margin:0 20px 20px 0;}
 img.alignright{float:right;margin:0 0 20px 20px;}
 img.aligncenter{margin-left:auto;margin-right:auto;}
+.site-main figure{border-radius: var(--siteMainFigureBorderRadius);}
 
 .wp-block-image figcaption{color:var(--blackCustomColor);display: none;}
 .wp-block-table{border-collapse:collapse;width:100%;}
@@ -251,7 +265,7 @@ body.admin-bar .site-header.active .wrap > .menu-toggle,body.admin-bar .site-hea
 body.admin-bar{margin-top:32px;}
 
 .title-area{float:left;width:100%;max-width:300px;text-align:left;margin:0 auto;}
-.title-area h1.site-title,.title-area p.site-title{margin:0;font-size:24px;line-height:30px;padding:8px;}
+.title-area h1.site-title,.title-area p.site-title{margin:0;font-size:24px;line-height:30px;padding:8px 8px 8px 0;}
 .title-area h1.site-title a,.title-area p.site-title a{text-decoration:none;color:inherit;}
 .title-area .site-title .icon{max-height:var(--siteTitleIconMaxHeight);}
 
@@ -262,9 +276,9 @@ body.admin-bar{margin-top:32px;}
 .nav-menu > *{line-height:0;}
 .nav-menu ul{clear:both;line-height:1;margin:0;width:100%;}
 .nav-menu .menu-item{list-style:none;position:relative;}
-.nav-menu .menu-item a{font-family:var(--secondaryFont);color:inherit;border:none;display:block;font-size:16px;font-weight:400;line-height:22px;padding:13px 18px;position:relative;text-decoration:none;}
-.nav-menu .menu-item:hover > a{background:inherit;}
-.nav-menu .menu-item.current-menu-item > a,.nav-menu .menu-item.current-menu-ancestor > a{color:inherit;}
+.nav-menu .menu-item a{font-family:var(--secondaryFont);color:var(--menuTextColor);letter-spacing:var(--menuLetterSpacing);text-transform:var(--menuTextTransform);display:block;font-size:16px;font-weight:400;line-height:22px;padding:13px 18px;position:relative;text-decoration:none;}
+.nav-menu .menu-item:hover > a{background:var(--menuItemHoverBackground);color:var(--menuItemHoverColor)}
+.nav-menu .menu-item.current-menu-item > a,.nav-menu .menu-item.current-menu-ancestor > a{color:var(--menuCurrentItemColor);}
 .nav-menu .submenu-expand{background:transparent;border:none;border-radius:0;box-shadow:none;padding:0;outline:none;cursor:pointer;position:absolute;line-height:0;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);right:4px;}
 .nav-menu .submenu-expand svg{fill:#757575;}
 .nav-menu .nav-primary .menu-item.search{line-height:0;}
@@ -399,7 +413,7 @@ div[data-widget-area-id="footer-1"] ul li, div[data-widget-area-id="footer-2"] u
 
 /*
   -------------
-  Media Queries
+  MEDIA QUERIES
   -------------
 */
 @media (min-width: 783px) {
