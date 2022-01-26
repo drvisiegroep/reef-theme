@@ -1,0 +1,56 @@
+/* 
+  ----------
+  Variabelen
+  ----------
+*/
+:root{
+    /* Kleuren */
+    --primaryColor:blue;
+    --primaryVariationColor:#5c911b;
+    --secondaryColor:#0073aa;
+    --secondaryVariationColor:#0d3452;
+    --blackCustomColor:#000000;
+    --whiteCustomColor:#ffffff;
+    --greyCustomColor:#d5d2cd;
+  
+    /* Fonts */
+    --primaryFont:'Roboto', sans-serif;
+    --secondaryFont:var(--primaryFont);
+  
+    /* Breedte wrapper, inner blocks en zoekveld wrap */
+    --siteWidth: 1200px;
+  
+    /* .site-main margin boven en onder. Mobiel vanaf 768 */
+    --siteContentMarginDesktop: 80px;
+    --siteContentMarginMobile: 36px;
+  
+    /* Buttons */
+    --buttonFontSize: 16px;
+    --buttonPadding: 13px 26px;
+    --buttonBorderRadius: 5px;
+    --buttonColor: var(--whiteCustomColor);
+    --buttonBackgroundColor: var(--primaryColor);
+    --buttonHoverBackgroundColor: var(--primaryVariationColor);
+  
+    /* Header */
+    --siteTitleIconMaxHeight: 100px;
+    --menuTextColor: var(--primaryColor);
+    --menuLetterSpacing: 0;
+    --menuCurrentItemColor: var(--secondaryColor);
+    --menuTextTransform: inherit;
+    --menuItemHoverColor: var(--blackCustomColor);
+    --menuItemHoverBackground: inherit;
+    --subMenuBackgroundColor: #eee;
+    --subMenuBackgroundColorHover: #fefefe;
+    --subMenuBackgroundColorOnScroll: #eee;
+    --menuBackgroundColorMobile: #eee;
+    --menuWidthOnScroll: 215px;
+    --searchSubmitSVG: #000;
+    --searchSubmitSVGHover: #000;
+  
+    /* Images */
+    --siteMainFigureBorderRadius: 5px;
+  
+    /* Footer */
+    --siteFooterIconMaxWidth: 40px;
+  }
