@@ -35,6 +35,7 @@
     /* Header */
     --siteTitleIconMaxHeight: 100px;
     --menuTextColor: var(--primaryColor);
+    --menuFontSize: 16px;
     --menuLetterSpacing: 0;
     --menuCurrentItemColor: var(--secondaryColor);
     --menuTextTransform: inherit;

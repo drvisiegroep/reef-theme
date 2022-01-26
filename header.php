@@ -39,7 +39,7 @@ tha_body_top();
 
     		<div class="title-area">
 
-				<p class="site-title"><a href="<?php echo esc_url( home_url() );?>" rel="home"><?php echo wa_svg_icon(['icon' => 'capybara']); ?>
+				<p class="site-title"><a href="<?php echo esc_url( home_url() );?>" rel="home"><?php echo wa_svg_icon(['icon' => 'logo']); ?>
 					<?php if($logo_text) echo get_bloginfo( 'name' ); ?>
 				</a></p>
 
