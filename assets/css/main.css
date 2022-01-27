@@ -112,10 +112,12 @@ h4,h5,h6{font-size:18px;}
 
 /* TODO: bestaande blokken restylen? */ 
 /* Meest gebruikte blokken voor content */
-.wp-block-media-text{grid-template-columns: 1fr 1fr;gap: 20px}
+.wp-block-media-text{grid-template-columns: 1fr 1fr;gap: var(--mediaTextBlockGap)}
+.wp-block-media-text.has-media-on-the-right{grid-template-columns: 1fr 1fr;}
 .wp-block-media-text .wp-block-media-text__content{padding: 0}
-.wp-block-media-text{}
-.wp-block-group{}
+.wp-block-media-text{margin-bottom:var(--mediaTextBlockMarginBottom)}
+.wp-block-media-text__content ul{margin-bottom: 16px}
+.wp-block-group{margin-bottom:var(--mediaTextBlockMarginBottom)}
 .wp-block-columns{}
 .wp-block-image{}
 
@@ -167,7 +169,10 @@ img{display:block;max-width:100%;height:auto;}
 img.alignleft{float:left;margin:0 20px 20px 0;}
 img.alignright{float:right;margin:0 0 20px 20px;}
 img.aligncenter{margin-left:auto;margin-right:auto;}
+
 .site-main figure{border-radius: var(--siteMainFigureBorderRadius);}
+.wp-block-media-text__media img{border-radius: var(--siteMainFigureBorderRadius);}
+.wp-block-post-featured-image img{border-radius: var(--siteMainFigureBorderRadius);}
 
 .wp-block-image figcaption{color:var(--blackCustomColor);display: none;}
 .wp-block-table{border-collapse:collapse;width:100%;}
@@ -341,10 +346,10 @@ body.admin-bar{margin-top:32px;}
   FOOTER
   ------
 */
-.site-footer{font-size:14px;padding: 32px 0 16px 0;background-color: var(--secondaryColor);}
-.site-footer a{color:var(--whiteCustomColor);opacity: 0.75;}
+.site-footer{font-size:14px;padding: 32px 0 16px 0;background-color: var(--footerBackgroundColor);}
+.site-footer a{color:var(--siteFooterLinkColor);opacity: 0.75;}
 .site-footer a:hover{opacity:1;}
-.site-footer .madebywa{font-size: 12px;color: #fff;text-align:right;opacity: 0.8;font-family: monospace;}
+.site-footer .madebywa{font-size: 12px;color: var(--siteFooterMadeByColor);text-align:right;opacity: 0.8;font-family: monospace;}
 
 /* TODO: Betere oplossing voor maken */
 .site-footer div > div {padding-top: 0}

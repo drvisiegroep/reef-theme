@@ -32,6 +32,10 @@
     --buttonBackgroundColor: var(--primaryColor);
     --buttonHoverBackgroundColor: var(--primaryVariationColor);
   
+    /* Blocks */
+    --mediaTextBlockMarginBottom: 60px;
+    --mediaTextBlockGap: 40px;
+
     /* Header */
     --siteTitleIconMaxHeight: 100px;
     --menuTextColor: var(--primaryColor);
@@ -54,4 +58,7 @@
   
     /* Footer */
     --siteFooterIconMaxWidth: 40px;
+    --footerBackgroundColor: var(--secondaryVariationColor);
+    --siteFooterLinkColor: var(--secondaryColor);
+    --siteFooterMadeByColor: var(--blackCustomColor)
   }
