@@ -103,7 +103,7 @@ function wp_get_svg( $path = '', $args = [] ) {
 
     // Als we een SVG en een link hebben moet er een link tag omheen, dat doen we hier. Zo niet, dan geven we alleen de svg door.
     if($url && $svg) {
-        return '<a href="' . $url . '">' . $svg . '</a>';
+        return '<a target="_blank" href="' . $url . '">' . $svg . '</a>';
     }
 
     return $svg;
