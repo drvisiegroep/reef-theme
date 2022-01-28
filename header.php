@@ -55,7 +55,9 @@ tha_body_top();
 
 	<?php 
 		$bgurl = get_the_post_thumbnail_url();
-		if(empty($bgurl)){ $bgurl = get_field('banner_afbeelding', 'option'); }
+		if( class_exists('ACF') ) {
+			if(empty($bgurl)){ $bgurl = get_field('banner_afbeelding', 'option'); }
+		}
 		if(empty($bgurl)){ $bgurl = get_the_post_thumbnail_url(get_option( 'page_on_front' )); }
 		echo '<div class="banner" style="background-image: url('. $bgurl .')"></div>';
 	?>

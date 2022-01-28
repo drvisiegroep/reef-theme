@@ -12,6 +12,10 @@ function reef_loop() {
 	if ( have_posts() ) :
 
 		tha_content_while_before();
+		
+		if(is_archive() || is_search()) : 
+			echo '<div class="archive-wrapper">';
+		endif;
 
 		// Begin loop
 		while ( have_posts() ) : the_post();
@@ -27,6 +31,11 @@ function reef_loop() {
 		endwhile;
 
 		tha_content_while_after();
+
+		if(is_archive() || is_search()) : 
+			echo '</div>';
+		endif;
+		
 
 	else :
 

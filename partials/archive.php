@@ -11,14 +11,14 @@
 // TODO: thumbnail_medium altijd?
 // TODO: Excerpts?
 //
-
+$max_chars_excerpt = 170;
 
 echo '<article class="post-summary">';
 
 	// ea_post_summary_image();
-	if(has_post_thumbnail()) {
+
 		echo '<a class="post-summary__image" href="' . get_permalink() . '" tabindex="-1" aria-hidden="true">' . wp_get_attachment_image( get_post_thumbnail_id() , 'thumbnail_medium' ).'</a>';
-	}
+	
 
 	echo '<div class="post-summary__content">';
 
@@ -34,7 +34,7 @@ echo '<article class="post-summary">';
 			echo '<p class="entry-category"><a href="' . get_term_link( $term, 'category' ) . '">' . $term->name . '</a></p>';
 
 		// The excerpt
-		echo '<div class="post-summary__excerpt">' . get_the_excerpt() . '</div>';
+		echo '<div class="post-summary__excerpt">' . substr(get_the_excerpt(), 0, $max_chars_excerpt) . '...</div>';
 
 	echo '</div> <!-- .post-summary__content-->';
 

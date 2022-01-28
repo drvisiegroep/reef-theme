@@ -46,6 +46,7 @@ include( get_template_directory() . '/inc/custom/custom-editor-options.php');
 include( get_template_directory() . '/inc/custom/custom-blocks.php');
 include( get_template_directory() . '/inc/custom/custom-enqueue.php');
 include( get_template_directory() . '/inc/custom/custom-forms.php');
+include( get_template_directory() . '/inc/custom/custom-login.php');
 
 
 

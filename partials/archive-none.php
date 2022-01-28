@@ -11,17 +11,17 @@
 
 echo '<section class="no-results not-found">';
 
-	echo '<header class="entry-header"><h1 class="entry-title">' . esc_html__( 'Nothing Found', 'reef-theme' ) . '</h1></header>';
+	echo '<header class="entry-header"><h1 class="entry-title">' . esc_html__( 'Helaas, we hebben niets kunnen vinden...', 'reef-theme' ) . '</h1></header>';
 	echo '<div class="entry-content">';
 
 	if ( is_search() ) {
 
-		echo '<p>' . esc_html__( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'reef-theme' ) . '</p>';
+		echo '<p>' . esc_html__( 'Sorry, maar niets kwam overeen met uw zoektermen. Probeer het opnieuw met een aantal andere zoekwoorden.', 'reef-theme' ) . '</p>';
 		get_search_form();
 
 	} else {
 
-		echo '<p>' . esc_html__( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'reef-theme' ) . '</p>';
+		echo '<p>' . esc_html__( 'Het lijkt erop dat we niet kunnen vinden wat u zoekt. Misschien kan zoeken helpen.', 'reef-theme' ) . '</p>';
 		get_search_form();
 	}
 
