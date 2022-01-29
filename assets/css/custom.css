@@ -60,5 +60,10 @@
     --siteFooterIconMaxWidth: 40px;
     --footerBackgroundColor: var(--secondaryVariationColor);
     --siteFooterLinkColor: var(--secondaryColor);
-    --siteFooterMadeByColor: var(--blackCustomColor)
+    --siteFooterMadeByColor: var(--blackCustomColor);
+
+    /* Post options */
+    --showInfoAbovePost: none;
+    --showInfoBelowPost: none;
+    
   }

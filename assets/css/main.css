@@ -1,5 +1,4 @@
 /* 
-TODO: small medium large font behalve p?
 TODO: kleur menu dropdowns onderverdelen mobiel / desktop / onscroll ?
 */
 
@@ -106,10 +105,10 @@ h4,h5,h6{font-size:18px;}
   ----------------
 */
 /* style editor fix voor alignfull en fix voor herbruikbare blokken */
+/* TODO: Fix voor flex / grid grootte queryblok / latest post block*/
 .wp-block:not([data-align="full"]){max-width:var(--siteWidth)}
 .block-editor-block-list__block.wp-block.is-reusable{max-width: unset;}
 .alignfull {margin-left: calc(50% - 50vw)!important;margin-right:calc(50% - 50vw)!important;width:unset!important;max-width:unset!important;}
-
 
 /* 
 Meest gebruikte blokken voor content
@@ -315,6 +314,8 @@ body.admin-bar{margin-top:32px;}
 .author-box .author-box-title{font-size:22px;}
 .author-box .avatar{border-radius:50%;position:absolute;top:0;left:0;}
 
+.entry-header{display: var(--showInfoAbovePost)}
+.after-entry{display: var(--showInfoBelowPost)}
 .singular .entry-header{margin-bottom:18px;}
 .singular .entry-header *:last-child{margin-bottom:0;}
 

@@ -37,4 +37,4 @@ function register_forms() {
 		),
 	) );
 }
-add_action( 'af/register_forms', 'register_forms' );
+// add_action( 'af/register_forms', 'register_forms' );
