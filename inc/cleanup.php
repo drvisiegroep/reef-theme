@@ -90,7 +90,11 @@ remove_action('wp_head', 'print_emoji_detection_script', 7 );
 remove_action('wp_print_styles', 'print_emoji_styles' );
 remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
 
-
+/*  DISABLE GUTENBERG STYLE IN HEADER| WordPress 5.9 */
+function wps_deregister_styles() {
+    wp_dequeue_style( 'global-styles' );
+}
+// add_action( 'wp_enqueue_scripts', 'wps_deregister_styles', 100 );
 
 //
 // Remove JSON API links in header html

@@ -7,16 +7,17 @@
 // @since        1.0.0
 //
 
-/* Slick integratie wanneer nodig */
+// TODO: custom laden als child theme niet geladen is.
+
+// Lage prio voor check op child-theme-css
 function slick() {
-    wp_enqueue_style( 'slick-css', get_template_directory_uri() . '/assets/js/slick/slick.css', array(), CHILD_THEME_VERSION );
-    wp_enqueue_style( 'slick-theme-css', get_template_directory_uri() . '/assets/js/slick/slick-theme.css', array(), CHILD_THEME_VERSION );
+    wp_enqueue_style( 'slick-css', get_template_directory_uri() . '/assets/js/slick/slick.css', array(), THEME_VERSION );
+    wp_enqueue_style( 'slick-theme-css', get_template_directory_uri() . '/assets/js/slick/slick-theme.css', array(), THEME_VERSION );
     wp_enqueue_script( 'slick-js', get_template_directory_uri() . '/assets/js/slick/slick.js', array( 'jquery' ), '1.5.3', true );
     wp_enqueue_script( 'slick-init',  get_template_directory_uri() . '/assets/js/slick/slick-init.js', array( 'slick-js' ), '1.0.0', true );
 }
 // add_action( 'wp_enqueue_scripts', 'slick',50);
 
-// Lage prio voor check op child-theme-css
 function reef_scripts() {
 
    
