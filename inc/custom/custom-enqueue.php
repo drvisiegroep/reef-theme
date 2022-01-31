@@ -11,8 +11,8 @@
 
 // Lage prio voor check op child-theme-css
 function slick() {
-    wp_enqueue_style( 'slick-css', get_template_directory_uri() . '/assets/js/slick/slick.css', array(), THEME_VERSION );
-    wp_enqueue_style( 'slick-theme-css', get_template_directory_uri() . '/assets/js/slick/slick-theme.css', array(), THEME_VERSION );
+    wp_enqueue_style( 'slick-css', get_template_directory_uri() . '/assets/js/slick/slick.css', array() );
+    wp_enqueue_style( 'slick-theme-css', get_template_directory_uri() . '/assets/js/slick/slick-theme.css', array() );
     wp_enqueue_script( 'slick-js', get_template_directory_uri() . '/assets/js/slick/slick.js', array( 'jquery' ), '1.5.3', true );
     wp_enqueue_script( 'slick-init',  get_template_directory_uri() . '/assets/js/slick/slick-init.js', array( 'slick-js' ), '1.0.0', true );
 }
@@ -29,7 +29,6 @@ function reef_scripts() {
     }
     
     wp_enqueue_script( 'js-reef-theme-main', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery' ), filemtime( get_template_directory() . '/assets/js/main.js' ), true );
-    // wp_enqueue_style( 'css-google-fonts', '//fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap', array(), null );
 
     if( ! is_admin() ) {
         wp_deregister_script( 'jquery' );
@@ -44,6 +43,5 @@ add_action( 'wp_enqueue_scripts', 'reef_scripts',99);
 /* Editor styles */
 function reef_editor_styles () {
     add_editor_style( 'assets/css/main.css' );
-    // add_editor_style( 'https://fonts.googleapis.com/css?family=Roboto:wght@300;400;700&display=swap' );
 }
 add_action( 'after_setup_theme', 'reef_editor_styles', 10);
