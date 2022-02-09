@@ -44,5 +44,5 @@ if(!function_exists('reef_allowed_blocks')) {
 			'core/block',
 		);
 	}
-	add_filter( 'allowed_block_types_all', 'our_allowed_block_types' );
+	// add_filter( 'allowed_block_types_all', 'our_allowed_block_types' );
 }
