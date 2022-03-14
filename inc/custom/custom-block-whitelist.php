@@ -12,7 +12,7 @@
 // Voeg hier de blokken toe die je wil gaan gebruiken.
 //
 // Er lijkt een bug te zitten in het whitelisten van de core/buttons. Ook al is deze gewhitelist je kan niet meer dan 1 knop toevoegen. [+] verschijnt niet.
-// Om dit op te lossen moet 'core/button' ook otoegevoegd worden.
+// Om dit op te lossen moet 'core/button' ook toegevoegd worden.
 // Eenzelfde soort bug zit in het toevoegen van patterns. Als je een column block hebt toegevoegd moet je zowel 'core/columns' als 'core/column' whitelisten.
 
 if(!function_exists('reef_allowed_blocks')) {
