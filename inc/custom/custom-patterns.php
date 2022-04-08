@@ -7,21 +7,24 @@
 // @since        1.0.0
 //
 
-register_block_pattern_category(
-    'custom',
-    [
-        'label' => esc_html__( 'Custom Patterns', 'reef-theme' ),
-    ]
-);
-
-
-
-function register_custom_block_patterns() {
-
-    include( get_template_directory() . '/inc/custom/custom-patterns/four-panel-media-text-dark-first.php' );
-    include( get_template_directory() . '/inc/custom/custom-patterns/usp-media-text.php' );
-
+if(!function_exists('reef_register_block_pattern_category')) {
+    register_block_pattern_category(
+        'custom',
+        [
+            'label' => esc_html__( 'Custom Patterns', 'reef-theme' ),
+        ]
+    );
 }
-add_action( 'init', 'register_custom_block_patterns' );
+
+
+if(!function_exists('reef_register_custom_block_patterns')) {
+    function reef_register_custom_block_patterns() {
+
+        // include( get_template_directory() . '/inc/custom/custom-patterns/CUSTOMPATTERN.php' );
+
+    }
+    add_action( 'init', 'reef_register_custom_block_patterns' );
+}
+
 
 
