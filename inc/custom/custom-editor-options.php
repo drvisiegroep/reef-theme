@@ -9,9 +9,8 @@
 // Opties voor de Gütenberg editor
 // https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/
 //
-// TODO: font sizes toevoegen aan de css.
 //
-// !!! Zorg ervoor dat deze waardes worden overgenomen in dke CSS !!!
+// !!! Zorg ervoor dat deze waardes worden overgenomen in de CSS !!!
 //
 if ( ! function_exists( 'reef_editor_options' ) ) :
 
@@ -53,22 +52,22 @@ if ( ! function_exists( 'reef_editor_options' ) ) :
                 array(
                     'name'  => __( 'Primary', 'reef-theme' ),
                     'slug'  => 'primary',
-                    'color'	=> '#94C35A',
+                    'color'	=> '#00204a',
                 ),
                 array(
                     'name'  => __( 'Primary-variation', 'reef-theme' ),
                     'slug'  => 'primary-variation',
-                    'color'	=> '#5c911b',
+                    'color'	=> '#005792',
                 ),
                 array(
                     'name'  => __( 'Secondary', 'reef-theme' ),
                     'slug'  => 'secondary',
-                    'color' => '#0073aa',
+                    'color' => '#00bbf0',
                 ),
                 array(
                     'name'  => __( 'Secondary-variation', 'reef-theme' ),
                     'slug'  => 'secondary-variation',
-                    'color' => '#0d3452',
+                    'color' => '#fdb44b',
                 ),
                 array(
                     'name'  => __( 'Black', 'reef-theme' ),
@@ -90,3 +89,5 @@ if ( ! function_exists( 'reef_editor_options' ) ) :
 endif;
 add_action( 'after_setup_theme', 'reef_editor_options' );
 ?>
+
+
