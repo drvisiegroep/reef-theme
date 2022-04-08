@@ -86,6 +86,7 @@ function wp_get_svg( $path = '', $args = [] ) {
 
     $args = wp_parse_args( $args, $defaults );
 
+    $svg = '';
     $role_attr = $args['role'];
     $css_class = $args['css_class'];
     $url = $args['link'];
@@ -105,6 +106,6 @@ function wp_get_svg( $path = '', $args = [] ) {
     if($url && $svg) {
         return '<a target="_blank" href="' . $url . '">' . $svg . '</a>';
     }
-
+    
     return $svg;
 }
