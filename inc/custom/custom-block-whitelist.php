@@ -15,7 +15,7 @@
 // Om dit op te lossen moet 'core/button' ook toegevoegd worden.
 // Eenzelfde soort bug zit in het toevoegen van patterns. Als je een column block hebt toegevoegd moet je zowel 'core/columns' als 'core/column' whitelisten.
 
-if(!function_exists('reef_allowed_blocks')) {
+if(!function_exists('reef_allowed_block_types')) {
 	function reef_allowed_block_types( $allowed_blocks ) {
 		return array(
 			// Tekst
