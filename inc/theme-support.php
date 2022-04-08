@@ -6,7 +6,6 @@
 // @author       Daniël R.
 // @since        1.0.0
 //
-// TODO: block-templates uitzetten als we die niet gebruiken
 
 // Theme support voor de kleuren staat in editor-options.php
 
