@@ -5,10 +5,10 @@
 */
 :root{
   /* Kleuren */
-  --primaryColor:blue;
-  --primaryVariationColor:#5c911b;
-  --secondaryColor:#0073aa;
-  --secondaryVariationColor:#0d3452;
+  --primaryColor:#00204a;
+  --primaryVariationColor:#005792; 
+  --secondaryColor:#00bbf0; 
+  --secondaryVariationColor:#fdb44b; 
   --blackCustomColor:#000000;
   --whiteCustomColor:#ffffff;
   --greyCustomColor:#d5d2cd;
