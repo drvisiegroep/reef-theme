@@ -1,8 +1,12 @@
 <?php
-// Parent
 //
 // Login logo / styles
 //
+// @package      reef-theme
+// @author       Daniël R.
+// @since        1.0.0
+//
+
 if(!function_exists('reef_login_logo')) {
     function reef_login_logo() { 
         ?>
