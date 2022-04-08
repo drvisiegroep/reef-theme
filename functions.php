@@ -7,11 +7,6 @@
 // @since        1.0.0
 // 
 
-// TODO: Checklist WIP
-// TODO: Zoekveld vertaling
-// TODO: Content width? Hebben we dat nodig?
-// TODO: Willen we verschillende layouts?
-
 // Global site options
 if( !function_exists('site_settings') ) {
     function site_settings() {
@@ -37,17 +32,18 @@ include( get_template_directory() . '/inc/helper-functions.php' );
 include( get_template_directory() . '/inc/theme-support.php' );
 include( get_template_directory() . '/inc/widgets.php' );
 
-// Custom
+//SVG
 include( get_template_directory() . '/inc/custom/svg-link-shortcode.php');
-include( get_template_directory() . '/inc/custom/custom-post-types.php');
-include( get_template_directory() . '/inc/custom/custom-block-whitelist.php');
-include( get_template_directory() . '/inc/custom/custom-patterns.php');
-include( get_template_directory() . '/inc/custom/custom-editor-options.php');
-include( get_template_directory() . '/inc/custom/custom-blocks.php');
-include( get_template_directory() . '/inc/custom/custom-enqueue.php');
-include( get_template_directory() . '/inc/custom/custom-forms.php');
-include( get_template_directory() . '/inc/custom/custom-login.php');
 
+// Custom
+include( get_template_directory() . '/inc/custom/custom-acf-blocks.php');
+include( get_template_directory() . '/inc/custom/custom-block-whitelist.php');
+include( get_template_directory() . '/inc/custom/custom-editor-options.php');
+include( get_template_directory() . '/inc/custom/custom-enqueue.php');
+include( get_template_directory() . '/inc/custom/custom-login.php');
+include( get_template_directory() . '/inc/custom/custom-patterns.php');
+include( get_template_directory() . '/inc/custom/custom-post-types.php');
+include( get_template_directory() . '/inc/custom/custom-shortcodes.php');
 
 
 // Voeg reusable blocks toe aan admin menu
